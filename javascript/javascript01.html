@@ -62,19 +62,20 @@
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
-                    <h3>01. 변수 : 데이터 저장</h3>
+                    <h3>00. 변수 : 데이터 저장</h3>
                     <p>변수는 데이터를 저장소입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     var x = 100;            //변수 x에 숫자 100을 저장함
     var y = 200;            //변수 y에 숫자 200을 저장함
     var z ="javascript";    //변수 z에 문자 "javascript"를 저장함
-
-    console log(x);
-    console log(y);
-    console log(z);
 }
 </code></pre>
+
+<!-- // console log(x); 
+// console log(y);
+// console log(z); -->
+
                     </div>
                     <div class="result">
                         100<br>
@@ -84,7 +85,7 @@
                 <!-- sample01 -->
 
                 <div id="sample02" class="sample">
-                    <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
+                    <h3>00. 변수 : 데이터 저장 + 데이터 변경</h3>
                     <p>변수는 데이터를 저장 할수도 있지만 변경도 가능하다.</p>
                     <div class="script">
 <pre><code code class="language-js">{
@@ -95,12 +96,12 @@
     x = 300;
     y = 200;
     z = "react";
-
-    console.log(x);
-    console.log(y);
-    console.log(z);
 }
-</code></pre>       
+</code></pre>   
+
+<!-- console.log(x);
+console.log(y);
+console.log(z);     -->
                     </div>
                     <div>
                         <div class="result">
@@ -119,7 +120,7 @@
                     <!-- sample02 -->
 
                     <div id="sample03" class="sample">
-                        <h3>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
+                        <h3>00. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
                         <p>변수는 데이터를 저장하고, 변경하고, 추가할 수 있습니다.</p>
                         <div class="script"></div>
 <pre><code code class="language-js">{
@@ -130,12 +131,11 @@
     x += 300; // x = x + 300; 
     y += 400;
     z += "react";
-
-    // console.log(x);
-    // console.log(y);
-    // console.log(z);
 }
 </code></pre>
+<!-- // console.log(x);
+// console.log(y);
+// console.log(z); -->
                 </div>
                 <div class="result">
                     400<br>
@@ -150,7 +150,7 @@
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다.
                     상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정할 수도 없습니다.</p>
                     <div class="script"></div>
-<pre><code>{
+<pre><code code class="language-js">{
     const x = 100;
     const y = 200;
     const z = "javascript";
@@ -158,10 +158,6 @@
     x = 300; 
     y = 400;
     z = "react";
-
-    // console.log(x);
-    // console.log(y);
-    // console.log(x);
 }
                     </div>
                     <div class="result">
@@ -169,18 +165,193 @@
                         600<br>
                         javascriptreact
                     </div>
-                    </div>
 </code></pre>
-
+    <!-- // console.log(x);
+    // console.log(y);
+    // console.log(x); -->
                 </div>
-                <div id="sample05" class="sample"></div>
-                <div id="sample06" class="sample"></div>
-                <div id="sample07" class="sample"></div>
-                <div id="sample08" class="sample"></div>
-                <div id="sample09" class="sample"></div>
-                <div id="sample10" class="sample"></div>
-            </div>
-        </div>
+                <!-- sample04  -->
+
+                <div id="sample05" class="sample">
+                    <h5>05. 배열 : 데이터 저장(여러개): 표현방법1</h5>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+}
+</code></pre>
+    <!-- console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample05 -->
+
+                <div id="sample06" class="sample">
+                    <h6>06. 배열 : 데이터 저장(여러개): 표현방법2</h6>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const arr = new Array(100, 200, "javascript");
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h07>07. 배열 : 데이터 저장(여러개): 표현방법3</h07>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const arr = [];
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+}
+</code></pre>
+    <!-- console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample07 -->
+
+                <div id="sample07" class="sample">
+                    <h8>08. 배열 : 데이터 저장(여러개): 표현방법4</h8>
+                    <div class="script"></div>
+<pre><code class="language-js">{
+        const arr = [100, 200, "javascript"]
+    }
+</code></pre>
+    <!-- console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <div id="sample09" class="sample">
+                    <h9>09. 객체 : 데이터 저장(키와 값) : 표현방법1</h9>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const obj = new Object();
+    obj[0] = 100;
+    obj[1] = 200;
+    obj[2] = "javascript";
+}
+</code></pre>
+    <!-- console.log(obj[0]);
+    console.log(obj[1]);
+    console.log(obj[2]); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample09 -->
+
+                <div id="sample10" class="sample">
+                    <h10>10. 객체 : 데이터 저장(키와 값) : 표현방법2</h10>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const obj = new Object();
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
+}
+</code></pre>
+    <!-- console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c); -->
+                </div>
+                <!-- sample10 -->
+
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h11>11. 객체 : 데이터 저장(키와 값) : 표현방법3</h11>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const obj = {};
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
+}
+</code></pre>
+    <!-- console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h12>12. 객체 : 데이터 저장(키와 값) : 표현방법3</h12>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const obj = {a:100, b:200, c:"javascript"}
+}
+</code></pre>
+    <!-- console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c); -->
+                </div>
+                <div class="result">
+                    100<br>
+                    200<br>
+                    javascript
+                </div>
+                <!-- sample12 -->
+
+                <div id="sample13" class="sample">
+                    <h13>00. 연산자</h13>
+                    <div class="script"></div>
+<pre><code code class="language-js">{
+    const a = 20000;
+    const b = 40000;
+}
+</code></pre>
+    <!-- console.log(a + b)
+    console.log(a - b)
+    console.log(a > b)
+    console.log(a * b)
+    console.log(a / b)
+    console.log(a % b) -->
+                </div>
+                <div class="result">
+                    60000<br>
+                    -20000<br>
+                    false<br>
+                    800000000<br>
+                    0.5<br>
+                    20000<br>
+                </div>
+                <!-- sample13 -->
     </main>
     <!-- main -->
 
