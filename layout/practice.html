@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(142, 166, 162);
+        }
+        #wrap {
+            width: 1200px;
+            height: 1080px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(193, 128, 128);
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(127, 181, 123);
+        }
+        #box {
+            width: 400px;
+            height: 780px;
+            background-color: rgb(223, 219, 195);
+            float: left;
+        }
+        #aside {
+            width: 400px;
+            height: 390px;
+            background-color: rgb(174, 46, 116);
+        }
+        #aside2 {
+            width: 400px;
+            height: 390px;
+            background-color: rgb(107, 154, 68);
+        }
+        #article {
+            width: 800px;
+            height: 780px;
+            background-color: rgb(182, 167, 69);
+            float: left;
+        }
+        #section {
+            width: 600px;
+            height: 100px;
+            background-color: rgb(55, 10, 10);
+            float: left;
+            clear: both;
+        }
+        #footer {
+            width: 600px;
+            height: 100px;
+            background: rgb(6, 107, 78);
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="box">
+            <div id="aside"></div>
+            <div id="aside2"></div>
+        </div>
+        <div id="article"></div>
+        <div id="section"></div>
+        <div id="footer"></div>
+    </div>
+    
+</body>
+</html>

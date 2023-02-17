@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(174, 114, 114);
+        }
+        #warp {
+            width: 1200px;
+            height: 1080px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(234, 180, 180);
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(241, 101, 101);
+        }
+        #box {
+            width: 390px;
+            height: 800px;
+            float: left;
+        }
+        #aside {
+            width: 390px;
+            height: 600px;
+            background-color: rgb(145, 165, 131);
+        }
+        #aside1 {
+            width: 390px;
+            height: 200px;
+            background-color: rgb(196, 205, 189);
+        }
+        #contents {
+            width: 810px;
+            height: 800px;
+            background-color: rgb(205, 144, 240);
+            float: left;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(152, 138, 213);
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="box">
+            <div id="aside"></div>
+            <div id="aside1"></div>
+        </div>
+        <div id="contents"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
