@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃4 - float 방식</title>
+    <!-- 이 페이지의 특징 / 전체 배경이 들어감 노가다 방식 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+        #nav {
+            width: 100%;
+            height: 300px;
+            background-color: #80CBC4;
+        }
+        #section {
+            width: 100%;
+            height: 580px;
+            background-color: #26A69A;
+
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #26A69A;
+        }
+        .header__container {
+            width: 1200px;
+            height: 100px;
+            background-color: #B2DFDB;
+            margin: 0 auto;
+        }
+        .nav__container {
+            width: 1200px;
+            height: 300px;
+            background-color: #26A69A;
+            margin: 0 auto;
+        }
+        .section__containder {
+            width: 1200px;
+            height: 580px;
+            background-color: #758f8c;
+            margin: 0 auto;
+        }
+        .footer__containder {
+            width: 1200px;
+            height: 100px;
+            background-color: #0de3cd;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+        <div id="wrap">
+                <div id="header">
+                    <div class="header__container"></div>
+                </div>
+                <div id="nav">
+                    <div class="nav__container"></div>
+                </div>
+                <div id="section">
+                    <div class="section__containder"></div>
+                </div>    
+                <div id="footer">
+                    <div class="footer__containder"></div>
+                </div>    
+        </div>
+</body>
+</html>
+
+
+바디에 div 박스 네개 만들고 
+각 박스에 이름 넣어주기 왑 헤더 네비 섹선 푸터 div id=""
+타이틀 및 스타일 항목에 #wrap . . . 각각 넣어주기
+위드 값 백 하이트 비지씨 작업
+
+스타일 마진 영 패딩 영
+
+id는 중복해서 사용 불가능 class는 중복해서 사용 가능
