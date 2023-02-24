@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2 - flex방식</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #e8f5e9;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #c8e6c9;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+        #main {
+            width: 1200px;
+            height: 780px;
+            display: flex;
+        }
+        #aside {
+            width: 300px;
+            height: 780px;
+            background-color: #81c784;
+        }
+        #section {
+            width: 600px;
+            height: 780px;
+            background-color: #66bb6a;
+        }
+        #article {
+            width: 300px;
+            padding: 780px;
+            background-color: #4caf50;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100;
+            background-color: #43a047;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="wrap">
+            <header id="header"></header>
+            <nav id="nav"></nav>
+            <main id="main">
+                <aside id="aside"></aside>
+                <section id="section"></section>
+                <acrticle id="acrticle"></acrticle>
+            </main>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+    
+</body>
+</html>
