@@ -426,21 +426,47 @@
             // document.write(num);
 
             // 주말숙제
-            let table = "<table border='3'>";
+            // let table = "<table border='1'>";
 
-            for(let i=0; i<5; i++){
+            // for(let i=0; i<5; i++){
+            //     table +="<tr>";
+            //     for(let j=0; j<5; j++){
+            //         table +="<td>"+i+"</td>";
+            //     }
+
+            //     table += "</tr>";
+            // }    
+
+            // document.write(table);
+
+            // let table = "<table border='1'>";
+
+            // for(let num=1; num<5; num++){
+            //     table +="<tr>";
+            //     for(let i=0; i<5; i++){
+            //         table +="<td>"+num+"</td>";
+            //         num++;
+            //     }
+
+            //     table += "</tr>";
+            // }    
+
+            // document.write(table);
+
+            let table = "<table border='1'>";
+
+            for(let num=1; num<5; num++){
                 table +="<tr>";
-                for(let j=0; j<5; j++){
-                    table +="<td>"+i+"</td>";
+                for(let i=0; i<25; i++){
+                    table +="<td>"+num+"</td>";
+                    num++;
                 }
 
                 table += "</tr>";
             }    
 
             document.write(table);
-
-        
-
+            document.write(num);
         </script>
         <script src="assets/js/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
