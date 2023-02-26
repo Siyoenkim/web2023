@@ -141,23 +141,22 @@
                     첫 번재로 tre인 조건식에 해당하는 코드만 실행 된다. 어떤 조건식도 true가 아니면 실행할 코드가 없다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">
-    // if(num === 90){} // 90이라는 것이 숫자인지 문자인지 확인하고 싶다면 =을 세 개 쓰면된다.
-    {
-        const num = 100;
+<pre><code class="language-js">// if(num === 90){} // 90이라는 것이 숫자인지 문자인지 확인하고 싶다면 =을 세 개 쓰면된다.
+{
+    const num = 100;
 
-        if(num == 90){
-            document.write("실행되었습니다.(num == 90)");
-        } else if (num == 100) {
-            document.write("실행되었습니다.(num == 100)");
-        } else if (num == 110) {
-            document.write("실행되었습니다.(num == 110)");
-        } else if (num == 120) {
-            document.write("실행되었습니다.(num == 120)");
-        } else {
-            document.write("실행되었습니다.");
-        }
+    if(num == 90){
+        document.write("실행되었습니다.(num == 90)");
+    } else if (num == 100) {
+        document.write("실행되었습니다.(num == 100)");
+    } else if (num == 110) {
+        document.write("실행되었습니다.(num == 110)");
+    } else if (num == 120) {
+        document.write("실행되었습니다.(num == 120)");
+    } else {
+        document.write("실행되었습니다.");
     }
+}
 
 * 삼항 연산자 사용
 (num == 100) ? document.write("true") : document.write("flase");
@@ -174,7 +173,75 @@
                 </div>
             </div> 
             <!-- 04  -->
+            <div id="sample05" class="sample">
+                <h3>05. 중첩 if문</h3>
+                <p>중첩 if문은 if문 안에 if문을 추가하는 것입니다.</p>
+                <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
 
+    if(num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    } else {
+        document.write("실행되었습니다.(4)")
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)<br>
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- 05 -->
+            <div id="sample09" class="sample">
+                <h3>09. for문</h3>
+                <p>for문과 if문을 사용해서 배열에 있는 값 1부터 9까지 짝수 : 빨간색, 홀수 : 파란색을 실행하는 예제입니다.</p>
+                <div class="script">
+<pre><code class="language-js">{
+    const arr = [1,2,3,4,5,6,7,8,9]
+
+    for(let i=1; i<=arr.length; i++){
+        if(i % 2 ==0){
+            document.write("<span style='color:red'>" + i + "</span>");
+        } else {
+            document.write(`<span style='color:blue'>${i}</span>`);
+        }
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            <script>
+                                const arr = [1,2,3,4,5,6,7,8,9]
+
+                                for(let i=1; i<=arr.length; i++){
+                                    if(i % 2 ==0){
+                                        document.write("<span style='color:red'>" + i + "</span>");
+                                    } else {
+                                        document.write(`<span style='color:blue'>${i}</span>`);
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+            </div> 
+            <!-- 09 -->
+        </div>
     </main>
     <!-- main -->
 
@@ -350,13 +417,27 @@
 
             //1부터 25까지 출력
             // (num이라는 변수를 활용)아래 공식을 위 테이블에적용 시켜서 테이블에 각 숫자를 넣는 것. 주말 숙제 1번 + 짝수는 빨강 홀수는 파랑
-            let num = 0;
-            for(let i=1; i<=25; i++){
-                document.write(i);
-                num++;
-            }
-            document.write("<br>");
-            document.write(num);
+            // let num = 0;
+            // for(let i=1; i<=25; i++){
+            //     document.write(i);
+            //     num++;
+            // }
+            // document.write("<br>");
+            // document.write(num);
+
+            // 주말숙제
+            let table = "<table border='3'>";
+
+            for(let i=0; i<5; i++){
+                table +="<tr>";
+                for(let j=0; j<5; j++){
+                    table +="<td>"+i+"</td>";
+                }
+
+                table += "</tr>";
+            }    
+
+            document.write(table);
 
         
 

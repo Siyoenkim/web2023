@@ -95,11 +95,19 @@ let은 변수 i=0은 배열의 시작점이며 i&lt; 9는 조건이다. i++은 �
 <!-- 데이타 라인 짙은 줄 라인 넘어 앞쪽 번호  -->
 <pre class="line-numbers"><code class="language-js">{
     for(let i = 1; i&lt; 100; i++){  //반복문
-        console.log(log(i));
+        console.log(i);
     }
 
 // 1, 2, 3, 4, 5, 6 ~ 100
 </code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1,2,3,4,5,6~~100                             
+                        </div>
+                    </details>
+                </div>
                 </div>
                 <!-- 01 -->
                 <div id="sample02" class="sample">
@@ -110,11 +118,23 @@ let은 변수 i=0은 배열의 시작점이며 i&lt; 9는 조건이다. i++은 �
     for(let i = 0; i&lt 51; i++){  //i = i + 1 약식
          console.log(i)
     }
+
+    //다른 방식 
+    //for(let i=0; i&lt=50; i++){
+        //console.log(i);
 </code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            1,2,3,4,5,6~~100                             
+                        </div>
+                    </details>
+                </div>
                 </div>
                 <!-- 02 -->
                 <div id="sample03" class="sample">
-                    <h3>03. 데이터 이펙트 : 0부터 100까지 짝수만 출력하기</h3>
+                    <h3>03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</h3>
                     <p>짝수만 출력하는 예시로 다양한 방식이 있습니다.</p>
 
 <pre datdata-line="2,3" class="line-numbers"><code class="language-js">{
@@ -122,6 +142,14 @@ let은 변수 i=0은 배열의 시작점이며 i&lt; 9는 조건이다. i++은 �
          console.log(i)
 }
 </code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            0,2,4,6,8,10~~96,98,100                             
+                        </div>
+                    </details>
+                </div>            
                 </div>
                 <!-- 03 -->
                 <div id="sample04" class="sample">
@@ -137,13 +165,19 @@ for(let i=1; i&lt=100; i++)
         console.log(i)
     }
 }
-
-// 결과값 : 2,4,6,8 ~ 50
 </code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            5,10,15,20,25~~90,95,100                             
+                        </div>
+                    </details>
+                </div>
                 </div>
                 <!-- 04 -->
                 <div id="sample05" class="sample">
-                    <h3>04. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
+                    <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
                     <p>if문을 사용하여 짝수와 홀수를 구분하고, 그 안에 색을 입혀 출력하는 방식입니다.<br>
                        큰따옴표 안에는 큰따옴표를 쓸 수 없기 때문에 작은 따옴표를 사용하고 문자열과 숫자를 결합하기 위해 + 사용합니다.<br>
                        div가 아닌 span을 사용하는 이유는 줄 바꿈에 있습니다. span은 문장 단위로 지정됩니다.
@@ -158,10 +192,31 @@ for ( let i = 1; i < 100; i ++) {
         }
     }
 }
-
-    //결과
-    //짝수는 파란색 홀수는 빨간색으로 출력된다.
 </code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                            for(let i=1; i<100; i++){
+                                if(i % 2 == 0){
+                                    document.write("<span style='color:blue'>" + i + "</span>")
+                                }
+                                if(i % 2 == 1){
+                                    document.write("<span style='color:red''>" + i + "</span>")
+                                }
+                            }
+                            document.write();
+                            for(let i=80; i<=100; i++){
+                                if(i % 2 == 0){
+                                    document.write("<span style='color:blue'>" + i + "</span>")
+                                }
+                                if(i % 2 == 1){
+                                    document.write("<span style='color:red'>" + i + "</span>")
+                                }
+                            }
+                        </script>
+                    </details>
+                </div>
                 </div>
                 <!-- 05 -->
                 <div id="sample06" class="sample">
@@ -180,7 +235,7 @@ for ( let i = 1; i < 100; i ++) {
                 }
         }
 
-    table +="&lt/tr>";
+table +="&lt/tr>";
 
 table += "&lt/table>";
 
@@ -209,6 +264,8 @@ document.write(table);
 </code></pre>
                 </div>
                 <!-- 07 -->
+            </div>
+            <!-- main sample div -->
     </main>
     <!-- main -->
 
