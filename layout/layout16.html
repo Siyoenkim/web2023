@@ -4,57 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃21 -그리드 방식</title>
+    <title>레이아웃16 - flex 유형 - 반응형</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         body {
-            background-color: #FFF3E0;
+            background-color: #fff3ed;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "nav nav"
-                "aside section"
-                "footer footer"
-            ;
-            grid-template-rows: 100px 100px 780px 100px;
-            grid-template-columns: 400px 800px;
+            display: flex;
+            flex-wrap: wrap;
         }
         #header {
-            background-color: #FFE0B2;
-            grid-area: header;
+            width: 100%;
+            height: 100px;
+            background-color: #ffe0b2;
         }
         #nav {
-            background-color: #FFCC80;
-            grid-area: nav;
+            width: 100%;
+            height: 100px;
+            background-color: #ffcc80;
         }
         #aside {
-            background-color: #FFB74D;
-            grid-area: aside;
+            width: 30%;
+            height: 780px;
+            background-color: #ffb74d;
         }
         #section {
-            background-color: #FFA726;
-            grid-area: section;
+            width: 70%;
+            height: 780px;
+            background-color: #ffa726;
         }
         #footer {
-            background-color: #FF9800;
-            grid-area: footer;
+            width: 100%;
+            height: 100px;
+            background-color: #ff9800;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+                
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            #aside {
+                width: 100%;
+                height: 300px;
+            }
+            #section {
+                width: 100%;
+                height: 480px;
+            }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
+        <header id=""header></header>
         <nav id="nav"></nav>
         <aside id="aside"></aside>
         <section id="section"></section>
         <footer id="footer"></footer>
     </div>
+    <!-- 다시 -->
 </body>
 </html>

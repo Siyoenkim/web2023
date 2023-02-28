@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/javascript192x192.png">
+    
 </head>
 <body>
     <header id="header">
@@ -57,6 +58,8 @@
                     <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
                     <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
                     <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 테이블 25칸(짝수:빨, 홀수:파)</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 테이블 25칸(3의 배수 출력, 5의 패수는 색)</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -254,7 +257,7 @@ document.write(table);
 <pre class="line-numbers"><code class="language-js">for ( let i=2; i<=9; i++ ) {
         document.write ( i + "단" ," &ltbr>");
     
-        for ( let j = 1; j <= 9; j++ ){ 
+        for ( let j = 1; j<= 9; j++ ){ 
             document.write( i + "*" + j + "=" + i * j);
             document.write( "&ltbr>" );
         }
