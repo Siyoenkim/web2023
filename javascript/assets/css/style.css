@@ -153,13 +153,14 @@ body {
     background-color: #282936;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .main__sample .notice {
-    border-left: 3px solid #0243f1;
+    border-left: 3px solid #ffdd00c1;
     padding: 10px 10px 10px 15px;
-    background-color: #f1f1f1;
-    
+    background-color: #282936;
+    color: #fff;
 }
 
 .main__sample .notice h4 {
