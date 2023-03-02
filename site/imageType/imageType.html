@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: NexonLv1Gothic;
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section__h2{
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666666;
+            margin-bottom: 70px;
+            font-weight: 300;
+        }
+        
+        /* image__wrap */
+        .image__wrap {
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image__inner .image {
+            width: 570px;
+            height: 370px;
+            background-color: #5e5e5e;
+            position: relative;
+        }
+        .image__body {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            text-align: left;
+            padding: 30px;
+        }
+        .image__body .title {
+            font-size: 32px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+        .image__body .desc {
+            margin-bottom: 15px; 
+            line-height: 1.5;;
+            padding-right: 20%;
+        }
+        .image__body .btn {
+            color: fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 30px;
+            display: inline-block;
+        }
+
+
+    </style>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">"
+</head>
+<body>
+    <section class="image__wrap section nexon">
+        <div class="container">
+            <h2 class="section__h2">1분 지식</h2>
+            <p class="section__desc">스몰토크를 위한 얇고도 넓은 지식</p>
+            <div class="image__inner">
+                <article class="image">
+                    <figure clss="image__header">
+                        <img src="../asset/image/imageType01_01.jpg" alt="얇고 넓은 지식">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">얇고 넓은 지식</h3>
+                        <p class="desc">이 지식에는 여러 분야의 다양한 지식들이 포함됩니다. 
+                            철학, 역사, 예술, 과학, 경제학의 얇은 맛을 알려드립니다.</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure clss="image__header">
+                        <img src="../asset/image/imageType01_02.png" alt="스몰토크">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">스몰토크</h3>
+                        <p class="desc">낯선 사람들과 나누는 
+                            사소한 이야기에는 얇고 넓은 지식 만한 것이 없죠!</p>
+                            <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
