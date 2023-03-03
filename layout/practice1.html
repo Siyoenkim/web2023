@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #ceb9e2;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside section"
+                "aside section1"
+                "footer footer"
+            ;
+            grid-template-rows: 100px 100px 390px 390px 100px;
+            grid-template-columns: 400px 800px;
+        }
+        #header {
+            background-color: #cdadff;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #c19aff;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #ab77ff;
+            grid-area: aside;
+        }
+        #section {
+            background-color: #8940ff;
+            grid-area: section;
+        }
+        #section1 {
+            background-color: #451d85;
+            grid-area: section1;
+        }
+        #footer {
+            background-color: #754cb6;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <section id="section1"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

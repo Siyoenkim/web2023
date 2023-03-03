@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2 - gird</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f1adb3;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside section article"
+            "aside section2 article"
+            "footer footer footer";
+            grid-template-columns: 300px 600px 300px 300px;
+            grid-template-rows: 100px 100px 390px 390px 100px;
+        }
+        #header {
+            background-color: #860015ad;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #ff00268c;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #cc071796;
+            grid-area: aside;
+        }
+        #section {
+            background-color: #b63a4d;
+            grid-area: section;
+        }
+        #section2 {
+            background-color: #7a3c45;
+            grid-area: section2;
+        }
+        #article {
+            background-color: #5c0512;
+            grid-area: article;
+        }
+        #footer {
+            background-color: #ce364da1;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <section id="section2"></section>
+        <article id="article"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
