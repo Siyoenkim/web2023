@@ -506,6 +506,44 @@ document.write("<br>");
                     </details>
                 </div>
             </div>
+            <!-- sample 14 -->
+            <div id="sample15" class="sample">
+                <h3>15. 객체 : 데이터 불러오기 : Object</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a:100,
+        b:200,
+        c:"javascript"
+    }
+    console.log(Object.keys(obj));  // a, b, c 앞의 값을 불러오는 방법
+    console.log(Object.values(obj));  // 100, 200, "javascript" 뒤의 값을 불러오는 방법
+    console.log(Object.entries(obj));  // 전체를 불러오는 방법 *
+}
+                </div>
+                <div class="result">
+                    <details>
+                    <summary>결과 확인하기</summary>
+                        <div>
+                            Array<br>
+                            0:100<br>                 
+                            1:200<br>                 
+                            2:300<br>                 
+                            3:400<br>                 
+                            4:500<br>
+                            100 200 300 400 500<br>
+                            100 200 300 400 500 600 700              
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>출력 방법</h4>
+                     <p>console.log(arr1) : [괄호]를 포함한 배열 자체를 불러온다. <br>
+                        console.log(...arr,) : ...으로 인해 배열 안의 값을 불러온다. ex) 100 200 300 400 500<br>
+                        console.log(...arr1, ...arr2) : 두개의 배열을 합친 값을 불러온다. ex) 100 200 300 400 500 600 700</p>   
+                </div>
+            </div>
             
         </div>
     <!-- main -->
