@@ -17,52 +17,45 @@
     position: absolute;
     left: 5px;
     top: 5px;
-    width: calc(100% - 10px );
-    height: calc(100% - 10px );
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
 }
 #header h1 {
     font-size: 28px;
     padding: 5px 5px 5px 10px;
-    font-family: 'Dunggeunmo';
+    font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
 }
-
 #header h1 a {
     color: #fff;
 }
-
 #header h1 em {
     font-size: 0.5em;
 }
-
-#header {
+#header ul {
     padding: 5px;
 }
-
 #header li {
     display: inline;
-    z-index: 10px;
+    z-index: 10;
     position: relative;
 }
-
 #header li a {
     color: #fff;
-    font-family: 'Dunggeunmo';
+    font-family: 'DungGeunMo';
     border: 1px dashed #fff;
     display: inline-block;
     padding: 5px;
 }
-
 #header li.active a,
-
 #header li a:hover {
     background-color: #fff;
     color: #000;
 }
 
 /* footer */
-#footer{
+#footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -70,37 +63,34 @@
     background-color: #262626;
     text-align: center;
 }
-
 #footer a {
     color: #fff;
     padding: 20px;
     display: block;
-    font-family: 'Dunggeunmo';
+    font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
 }
-
 #footer::before {
     content: '';
     border: 4px ridge #a3a3a3;
     position: absolute;
     left: 5px;
     top: 5px;
-    width: calc(100% - 10px );
-    height: calc(100% - 10px );
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
 }
-
 #main {
     padding: 100px 0;
 }
 
-/* quiz__wrap*/
+/* quiz__wrap */
 .quiz__wrap {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.quiz__wrap .quiz{
+.quiz__wrap .quiz {
     width: 500px;
     background-color: #fff;
     border: 8px ridge #cacaca;
@@ -110,7 +100,7 @@
     border: 3px ridge #cacaca;
     border-bottom-width: 6px;
     padding: 5px;
-    font-family: 'Dunggeunmo';
+    font-family: 'DungGeunMo';
     font-size: 16px;
     color: #3b3b3b;
     text-align: center;
@@ -119,44 +109,42 @@
     padding: 20px;
     font-size: 24px;
     font-family: 'PyeongChang';
-    font-weight: 700;
+    font-weight: 300;
+    line-height: 1.4;
     border-bottom: 6px ridge #cacaca;
-
 }
 .quiz__question em {
-    color: #ff3c3c;
+    color: #5d5d5d;
 }
-.quiz_answer {
+.quiz__answer {
+    font-family: 'PyeongChang';
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    font-family: 'PyeongChang';
-    font-weight: 700;
-    /* border-bottom: 6px ridge #cacaca; */
 }
-.quiz_answer .confirm {
-    background-color: #6bc7df;
+.quiz__answer .confirm {
+    background-color: #cacaca;
     border: 6px ridge #cacaca;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
     font-size: 22px;
-    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
+    font-weight: bold;
 }
-.quiz_answer .confirm:hover {
-    background-color: #daf5fc;
+.quiz__answer .confirm:hover {
+    background-color: #cacaca55;
 }
-.quiz_answer .result {
-    background-color: #fff;
+.quiz__answer .result {
+    background-color: #cacaca55;
     border: 6px ridge #cacaca;
     width: 100%;
     font-family: 'PyeongChang';
     padding: 10px 20px;
     font-size: 22px;
 }
-.quiz_answer .input {
+.quiz__answer .input {
     background-color: #fff;
     border: 6px groove #cacaca;
     width: 100%;
@@ -169,21 +157,21 @@
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
 }
-
 .quiz__footer {
     border-top: 6px ridge #cacaca;
     padding: 20px;
     font-family: 'PyeongChang';
-    background-color: #f5f5f5;
+    background-color: #cacaca55;
 }
 .quiz__footer::before {
-    content: "Tip";
-    color: red;
+    content: '✍️Tip';
+    color: #ff3c3c;
     font-weight: bold;
 }
 .quiz__desc {
     padding-top: 5px;
 }
+
 /* dog__wrap */
 .dog .tail,
 .dog .chin,
@@ -197,9 +185,9 @@
 .dog .face::after,
 .dog .ears::before,
 .dog .ears::after,
-.dog__wrap {
+.dog__wrapper {
     transition: 0.2s ease-in;
-  }
+}
 .card-container {
     position: relative;
     width: 360px;
@@ -209,7 +197,8 @@
     border-radius: 3%;
     z-index: 0;
 }
-.card-container::before, .card-container::after {
+.card-container::before,
+.card-container::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -219,7 +208,6 @@
     border-radius: 3%;
     z-index: -1;
 }
-
 .dog .head,
 .dog .body {
     position: relative;
@@ -235,7 +223,8 @@
     top: -14%;
     width: 100%;
 }
-.dog .ears::before, .dog .ears::after {
+.dog .ears::before,
+.dog .ears::after {
     content: "";
     position: absolute;
     top: 0;
@@ -261,7 +250,8 @@
     height: 100%;
     border-radius: 50% 50% 0 0;
 }
-.dog .face::before, .dog .face::after {
+.dog .face::before,
+.dog .face::after {
     content: "";
     display: block;
     margin: auto;
@@ -287,7 +277,8 @@
     top: 29%;
     text-align: center;
 }
-.dog .eyes::before, .dog .eyes::after {
+.dog .eyes::before,
+.dog .eyes::after {
     content: "";
     display: inline-block;
     width: 12px;
@@ -325,10 +316,11 @@
     text-align: center;
     background: #451d1c;
 }
-.dog .mouth::before, .dog .mouth::after {
+.dog .mouth::before,
+.dog .mouth::after {
     content: "";
     position: absolute;
-    top: -4px;
+    top: -7px;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -347,7 +339,8 @@
     position: relative;
     z-index: 1;
 }
-.dog .tongue::before, .dog .tongue::after {
+.dog .tongue::before,
+.dog .tongue::after {
     content: "";
     position: absolute;
 }
@@ -387,7 +380,8 @@
     margin: auto;
     z-index: 0;
 }
-.dog .body::before, .dog .body::after {
+.dog .body::before,
+.dog .body::after {
     content: "";
     position: absolute;
     top: -1px;
@@ -426,7 +420,8 @@
     background: #F7AA2B;
     border-radius: 10px 10px 0 0;
 }
-.dog .legs::before, .dog .legs::after {
+.dog .legs::before,
+.dog .legs::after {
     content: "";
     position: absolute;
     bottom: 1px;
@@ -454,6 +449,7 @@
     0% {
         transform: rotate(37deg);
     }
+
     100% {
         transform: rotate(52deg);
     }
@@ -463,91 +459,95 @@
         visibility: visible;
     }
 }
-
 .like {
-  background: #ffedc6;
+    background: #f0764ac0;
 }
 .like .face::before {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .like .face::after {
-  height: 85px;
+    height: 85px;
 }
 .like .eyes {
-  top: 13%;
+    top: 13%;
 }
 .like .eyes::before,
 .like .eyes::after {
-  width: 18px;
-  height: 5px;
-  margin: 0px 12.5%;
-  transform: rotate(-37.5deg);
-  border-radius: 20px;
+    width: 18px;
+    height: 5px;
+    margin: 0px 12.5%;
+    transform: rotate(-37.5deg);
+    border-radius: 20px;
 }
 .like .eyes::after {
-  transform: rotate(37.5deg);
+    transform: rotate(37.5deg);
 }
 .like .nose {
-  top: 18%;
+    top: 18%;
 }
 .like .mouth {
-  top: 16.5%;
+    top: 16.5%;
 }
 .like .tongue::before {
-  height: 12px;
+    height: 12px;
 }
 .like .tongue::after {
-  height: 24px;
+    height: 24px;
     animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
 }
 .like .chin {
-  top: 34%;
+    top: 34%;
 }
 .tail {
     animation: movetail 0.1s linear infinite alternate forwards;
 }
-
+.like .tail {
+    animation: movetail 0.1s linear infinite alternate forwards;
+}
 .dislike {
-  background: #5e5e81;
+    background: #5e5ed2b0;
 }
 .dislike .ears::before {
-  transform: rotate(-50deg) translate(-7px, 2px);
+    transform: rotate(-50deg) translate(-7px, 2px);
 }
 .dislike .ears::after {
-  transform: rotate(50deg) translate(7px, 2px);
+    transform: rotate(50deg) translate(7px, 2px);
 }
 .dislike .face::before {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 .dislike .face::after {
-  height: 55px;
+    height: 55px;
 }
 .dislike .eyes {
-  top: 38%;
+    top: 38%;
 }
 .dislike .eyes::before,
 .dislike .eyes::after {
-  width: 18px;
-  height: 5px;
-  margin: 0px 14.5%;
-  transform: rotate(-37.5deg);
-  border-radius: 20px;
+    width: 18px;
+    height: 5px;
+    margin: 0px 14.5%;
+    transform: rotate(-37.5deg);
+    border-radius: 20px;
 }
 .dislike .eyes::after {
-  transform: rotate(37.5deg);
+    transform: rotate(37.5deg);
 }
 .dislike .teardrop {
-          animation: cry 0.1s ease-in 0.25s forwards;
+    animation: cry 0.1s ease-in 0.25s forwards;
 }
 .dislike .nose {
-  top: 44%;
+    top: 44%;
 }
 .dislike .mouth {
-  top: 42%;
+    top: 42%;
 }
 .dislike .chin {
-  top: 52%;
+    top: 52%;
 }
 .dislike .tail {
-  transform: rotate(0);
+    transform: rotate(0);
+}
+.dislike .tail {
+    animation: movetail 0.5s linear infinite alternate forwards;
 }
