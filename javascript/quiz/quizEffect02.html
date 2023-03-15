@@ -17,6 +17,8 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">3</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -61,9 +63,7 @@
                         <div class="result"></div>
                     </div>
                 </div>
-                <div class="quiz__footer">
                     <div class="quiz__desc">
-                        설명
                     </div>
                 </div>
             </div>
@@ -88,7 +88,6 @@
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
         const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
-        const quizFooter = quizWrap.querySelector(".quiz__footer");
 
         // 문제 정보
         const infoType = "정보처리 기능사";
@@ -110,22 +109,22 @@
 
         // 정답,해설 숨기기
         quizAnswerResult.style.display = "none";        
-        quizFooter.style.display = "none";              
+        quizDesc.style.display = "none";              
 
         // 사용자 정답
         quizAnswerCofirm.addEventListener("click", function(){
-            const userAnswer = quizAnswerInput.value.trim();
-            quizAnswerCofirm.style.display = "none";    
-            quizAnswerResult.style.display = "block";   
-            quizFooter.style.display = "block";         
-                if(infoAnswer == userAnswer){
-                    quizAnswerInput.style.display = "none"; 
-                    dogWrap.classList.add("like");
-                } else {
-                    
-                    dogWrap.classList.add("dislike");
-                };
-        });        
+        const userAnswer = quizAnswerInput.value.trim();
+        quizAnswerCofirm.style.display = "none";    
+        quizAnswerResult.style.display = "block";   
+        quizDesc.style.display = "block";         
+            if(infoAnswer == userAnswer){
+                quizAnswerInput.style.display = "none"; 
+                dogWrap.classList.add("like");
+            } else {
+                
+                dogWrap.classList.add("dislike");
+            };
+    });        
     </script>
 </body>
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        /* common 공통요소 */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: NexonLv1Gothic;
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2{
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 1;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .section__desc {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 15px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .box {
+            display: flex;
+            justify-content: space-around;
+        }
+        .cont {
+            width: 373px;
+            height: 500px;
+            /* background-color: #dadada; */
+        }
+        .small {
+            display: inline-block;
+            padding: 1px 30px;
+            background-color: rgb(247, 161, 0);
+            color: #000;
+            font-size: 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .text_dot ul {
+            margin-left: 16px;
+            line-height: 1.6;
+        }
+
+
+    </style>
+
+<link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+</head>
+<body>
+    <section class="image__wrap section nexon">
+        <div class="container box">
+            <div class="cont">
+                <div class="text_dot">
+                <span class="small">Space</span>
+                <h2 class="section__h2">고대 이집트</h2>
+                    <p class="section__desc">고대 이집트 문화는 다양한 측면에서 <br>매우 독특하고 
+                    흥미로운 요소들을 가지고 있습니다. <br>아래는 고대 이집트 문화의 주요 목록입니다.</p>
+                    <ul>
+                        <li>종교</li>
+                            이집트는 매우 다양한 종교적 신앙을 가졌습니다.
+                        <li>건축</li>
+                            대표적으로 피라미드가 있습니다.
+                        <li>문화적 예술</li>
+                            이들은 예술을 통해 신들을 숭배하며,
+                            다양한 상황과 <br>주제를 표현했습니다.
+                        <li>글씨체</li>
+                            이집트는 유명한 글씨체 중 하나인 
+                           "갈레오"라는 <br>글씨체를 만들어냈습니다.
+                    </ul>
+                </div>
+            </div>
+         
+            <div class="cont">
+                <figure class="image__inner">
+                    <img src="../asset/image/TEXT_TYPE01.jpg">
+                </figure>
+            </div>
+        
+            <div class="cont">
+                <figure class="image__inner">
+                    <img src="../asset/image/TEXT_TYPE02.jpg">
+                </figure>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
