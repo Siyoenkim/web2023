@@ -94,11 +94,518 @@
     <script>
         // 문제 정보 choice를 객체 안의 객체로 작성한 경우
         const quizInfo = [
-            {.
+            {
                 infoType : "웹디자인",
-                infoTime : "",
-                infoNumber : "",
-                infoQuestion : "<img style ='width:200px' src='../assets/data img/image_01.jpg' alt='image_01.jpg'>",
+                infoTime : "2013년 2회",
+                infoNumber : "20130201",
+                infoQuestion : "굿 디자인(good design)을 위한 디자인의 조건에 포함되지 않는 것은?",
+                infoChoice : {
+                    1:"합목적성",
+                    2:"독창성",
+                    3:"심미성",
+                    4:"모방성",
+                },
+                infoAnswer : "4",
+                infoDesc : "디자인의 조건은 합목적성, 경제성,심미성,독창성, 질서성이 있습니다.<br>1. 합목적성은 목적에 맞는 기능성 을 말합니다. 즉 의자를 디자인할때 편안함을 목적으로 설계해야한다는거죠. 실용성과 효용성, 합리적, 과학적, 객관적입니다.<br>2. 경제성은 가격이 너무 비싸면 안된다는겁니다.<br>3. 심미성이란 아름다움에 관한겁니다. 당연히 주관적이고 개인적이며 유행성을 가지겠죠.<br>4. 독창성이란 타제품과 차별화되고 창조적인 디자인을 말합니다.<br>5. 질서성은 독창성과 심미성,합목적성,경제성의 4가지 조건들이 조화를 이루어야 한다는걸 의미합니다<br>"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130202",
+                infoQuestion : "다음이 설명하고 있는 것은? <br> - 주어진 길이를 가장 이상적으로 나누는 비를 말한다. <br> -근사값이 약 1.618인 무리수이다.",
+                infoChoice : {
+                    1:"비례",
+                    2:"황금비율",
+                    3:"삼각분할",
+                    4:"프로포션",
+                },
+                infoAnswer : "2",
+                infoDesc : "황금비율에 대한 설명입니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130203",
+                infoQuestion : "다음 ( )안에 알맞은 용어는? <br><img style ='width:400px' src='../assets/data img/Design_img_03.png' alt='Design_img_03.png'>",
+                infoChoice : {
+                    1:"1.	(ㄱ) 색상, (ㄴ) 채도, (ㄷ) 명도",
+                    2:"2.	(ㄱ) 색상, (ㄴ) 명도, (ㄷ) 채도",
+                    3:"3.	(ㄱ) 채도, (ㄴ) 명도, (ㄷ) 색상",
+                    4:" 4.	(ㄱ) 명도, (ㄴ) 채도, (ㄷ) 색상",
+                },
+                infoAnswer : "1",
+                infoDesc : "색상 채도 명도"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130204",
+                infoQuestion : "입체파(Cubism)의 가장 대표적인 화가는?",
+                infoChoice : {
+                    1:"피카소",
+                    2:"쿠르베",
+                    3:"찰스 자보",
+                    4:"도미에",
+                },
+                infoAnswer : "1",
+                infoDesc : "피카소 브라크 후앙 그리스 등이 있습니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130205",
+                infoQuestion : "컬러 인쇄를 위해 C, M, Y, K 4색의 네거필름으로 만드는 과정을 무엇이라 하는가?",
+                infoChoice : { 
+                    1:"색분해",
+                    2:"색상좌표",
+                    3:"색도도",
+                    4:"색수정",
+                },
+                infoAnswer : "1",
+                infoDesc : "색분해란?( color separation, 色分解] ) 컬러인쇄를 하기 위해 원고로부터 4색으로 색을 가른 네거티브를 만드는 일 입니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130206",
+                infoQuestion : "데 스틸(De Stijl)에 관한 설명으로 옳지 않은 것은?",
+                infoChoice : {
+                    1:"네덜란드를 중심으로 한 신조형 운동으로 요소주의라고도 불리운다.",
+                    2:"두스부르크, 몬드리안, 리트벨트 등이 주요인물이다.",
+                    3:"아르누보의 조형사상에 큰 영향을 주었다.",
+                    4:"현대의 조형 활동은 인공세계를 상징하고 표현하는데 중점을 두어야 한다고 생각하였다.",
+                },
+                infoAnswer : "3",
+                infoDesc : "아르누보 : 1890년 프랑스와 벨기에 중심으로 일어난 범유럽적 신 장식 미술운동으로 식물을 모티브로한 추상 형식과 화려한 색채가 특징임."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130207",
+                infoQuestion : "",
+                infoChoice : {
+                    1:"곡선 - 매력, 우아",
+                    2:"사선 - 동적, 안정",
+                    3:"수평선 - 평화, 정",
+                    4:"수직선- 희망, 긴장",
+                },
+                infoAnswer : "2",
+                infoDesc : "곡선 : 부드러움, 우아함, 매력, 섬세함.<br>사선 : 운동감, 속도감, 불안정함.<br>수평선 : 안정감, 평온, 너비감, 정지감, 무한함<br>수직선 : 높이감, 상승, 엄숙함, 강직함, 존엄, 희망, 숭고한 느낌, 긴장<br>"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130208",
+                infoQuestion : "적용 매체에 따른 디자인의 분류로 옳지 않은 것은?",
+                infoChoice : {
+                    1:"프로덕트디자인",
+                    2:"시각디자인",
+                    3:"기계설계디자인",
+                    4:"환경디자인",
+                },
+                infoAnswer : "3",
+                infoDesc : "적용 매체에 따라 시각 디자인, 프로덕트(공업) 디자인, 환경 디자인으로 구분됨"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130209",
+                infoQuestion : "심미성에 대한 설명으로 맞는 것은?",
+                infoChoice : {
+                    1:"아름다움을 느끼는 미적 의식이며 주관적일 수 있다.",
+                    2:"모든 사람에게 동일한 형태로 나타난다.",
+                    3:"합리적이며 객관적인 미적 활동이다.",
+                    4:"국가, 민족, 관습, 시대와 관계없이 동일하게 나타난다.",
+                },
+                infoAnswer : "1",
+                infoDesc : "심미성이란 아름다움을 느끼는 미적 의식입니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130210",
+                infoQuestion : "색광의 3원색을 모두 혼합하면 나타나는 색상으로 맞는 것은?",
+                infoChoice : {
+                    1:"검정(Black)",
+                    2:"노랑(Yellow)",
+                    3:"흰색(White)",
+                    4:"자주(Magenta)",
+                },
+                infoAnswer : "3",
+                infoDesc : "색광의 3원색을 모두 혼합하면 흰색이 됩니다. (같은 말로 가산혼합이라 합니다.)"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130211",
+                infoQuestion : "시각적 또는 촉각적으로 느껴지는 물체 표면이 어떤 느낌을 의미하는가?",
+                infoChoice : {
+                    1:"공간",
+                    2:"점이",
+                    3:"질감",
+                    4:"시간",
+                },
+                infoAnswer : "3",
+                infoDesc : "시각적 또는 촉각적으로 느껴지는 물체의 표면을 질감이라 합니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130212",
+                infoQuestion : "디자인의 원리에 대한 설명으로 틀린 것은?",
+                infoChoice : {
+                    1:"통일은 조화로운 형, 색, 질감이 공통된 특징을 갖고 있다.",
+                    2:"대칭은 균형의 전형적인 구성형식이며 좌우대칭, 방사대칭이 있다.",
+                    3:"반복은 동일한 요소나 대상 등을 두 개 이상 나열시켜 율동감을 표현하는 것으로 시각적으로 힘의 강약효과가 있다.",
+                    4:"조화는 일정한 방향을 유지하나 크기와 형태가 다른 경우를 의미한다.",
+                },
+                infoAnswer : "4",
+                infoDesc : "조화 : 두 개 이상의 조형 요소들이 만들어 내는 어울림 율동 : 활기 있게 살아 움직이는 듯한 시각적 리듬감"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130213",
+                infoQuestion : "디자인의 표현 요소가 아닌 것은?",
+                infoChoice : {
+                    1:"점, 선, 면",
+                    2:"방향, 공간",
+                    3:"형태, 크기",
+                    4:"흔적, 영역",
+                },
+                infoAnswer : "4",
+                infoDesc : "흔적과 영역은 디자인의 표현 요소가 아닙니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130214",
+                infoQuestion : "과거부터 전해 내려와 습관적으로 사용하는 색 하나하나의 색명을 무엇이라 하는가?",
+                infoChoice : {
+                    1:"일반색명",
+                    2:"계통색명",
+                    3:"관용색명",
+                    4:"특정색명",
+                },
+                infoAnswer : "3",
+                infoDesc : "과거부터 전해 내려와 습관적으로 사용하는 색 하나하나의 색명은 관용색명입니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "2013015",
+                infoQuestion : "디자인의 기본 요소 중 형과 형태에 관한 설명으로 틀린 것은?",
+                infoChoice : {
+                    1:"기본 형태에는 점, 선, 면, 입체가 있다.",
+                    2:"형태는 일정한 크기, 색채, 질감을 가진다.",
+                    3:"형에는 현실적 형과 이념적 형이 있다.",
+                    4:"이념적 형은 그 자체만으로 조형이 될 수 있다.",
+                },
+                infoAnswer : "4",
+                infoDesc : "해설추가"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130216",
+                infoQuestion : "서로 반대되는 색을 혼합하여 원래의 색보다 뚜렷해지고 채도가 높아 보이는 현상을 이용한 대비는?",
+                infoChoice : {
+                    1:"보색 대비",
+                    2:"한난 대비",
+                    3:"동시 대비",
+                    4:"색상 대비",
+                },
+                infoAnswer : "1",
+                infoDesc : "해설추가"
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130217",
+                infoQuestion : "웹에 사용할 이미지에 대한 설명으로 맞는 것은?",
+                infoChoice : {
+                    1:"이미지는 최대한 고해상도의 이미지를 사용한다.",
+                    2:"이미지의 기본단위는 ㎝ 이다.",
+                    3:"이미지는 CMYK 모드를 사용한다.",
+                    4:"주로 JPG, GIF 포맷의 이미지를 사용한다.",
+                },
+                infoAnswer : "4",
+                infoDesc : "주로 JPG, GIF 포맷의 이미지를 사용합니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130218",
+                infoQuestion : "다음이 설명하고 있는 색의 혼합은?<br><img style ='width:400px' src='../assets/data img/Design_img_18.png' alt='Design_img_18.png'>",
+                infoChoice : {
+                    1:"감산 혼합",
+                    2:"가산 혼합",
+                    3:"병치 혼합",
+                    4:"중간 혼합",
+                },
+                infoAnswer : "2",
+                infoDesc : "가산 혼합에 대한 설명입니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130219",
+                infoQuestion : "배색의 조건에 대한 설명으로 틀린 것은?",
+                infoChoice : {
+                    1:"사물의 용도나 기능에 부합되는 배색을 해야 한다.",
+                    2:"색이 주는 심리적 효과를 고려해야 한다.",
+                    3:"사용자의 특성 보다는 색채 계획자의 특성에 맞추어 배색 한다.",
+                    4:"환경적 요인을 충분히 고려하여 배색 한다.",
+                },
+                infoAnswer : "3",
+                infoDesc : "사용자의 특성에 맞추어 배색하는 것이 좋습니다."
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130220",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "4",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130221",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130222",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "1",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130223",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "1",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130224",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "4",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130225",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130226",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130227",
+                infoQuestion : "3",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130228",
+                infoQuestion : "4",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130229",
+                infoQuestion : "1",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130230",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "2",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130231",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "1",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130232",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "2",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130233",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "4",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130234",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "1",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130235",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "4",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130236",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130237",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130238",
+                infoQuestion : "",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "3",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130239",
+                infoQuestion : "1",
+                infoChoice : {
+                    1:".",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+                infoAnswer : "",
+                infoDesc : ""
+            },{
+                infoType : "웹디자인",
+                infoTime : "2013년 2회",
+                infoNumber : "20130240",
+                infoQuestion : "1",
                 infoChoice : {
                     1:".",
                     2:"",
