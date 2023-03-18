@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃10 - float 유형 - 반응형</title>
+    <title>레이아웃 20</title>
     <style>
         * {
             margin: 0;
@@ -29,8 +29,8 @@
         .container {
             width: 1200px;
             height: inherit;
-            background-color: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.2);
         }
         .container1 {
             height: 100px;
@@ -41,83 +41,79 @@
             background-color: #684D43;
         }
         .box {
-            width: 100%;
             height: 480px;
+            display: flex;
+            flex-wrap: wrap;
         }
         .container3 {
             width: 50%;
             height: inherit;
             background-color: #594139;
-            float: left;
         }
         .container4 {
             width: 50%;
             height: inherit;
             background-color: #4A352F;
-            float: left;
         }
-        @media (max-width:1280px){
-            .container {
-                width: 98%;
-            }
-            .container1 {
-                width: 33.3333%;
-                height: 780px;
-                float: left;
-            }
-            .container2 {
-                width: 66.6666%;
-                height: 390px;
-                float: left;
-            }
-            .box {
-                width: 66.6666%;
-                height: 390px;
-                float: left;
-            }
-        }
-        @media (max-width:768px){
-            .container {
-                width: 100%;
-            }
-            .container1 {
-                width: 40%;
-            }
-            .container2 {
-                width: 60%;
-                height: 260px;
-            }
-            .box {
-                width: 60%;
-            }
-            .container3 {
-                width: 100%;
-                height: 260px;
-            }
-            .container4 {
-                width: 100%;
-                height: 260px;
-            }
-        }
-        @media (max-width:480px){
-            .container1 {
-                width: 100%;
-                height: 150px;
-            }
-            .container2 {
-                width: 100%;
-                height: 210px;
-            }
-            .box {
-                width: 100%;
-            }
-            .container3 {
-                height: 210px;
-            }
-            .container4 {
-                height: 210px;
-            }
-        }
+     @media(max-width:1280px){
+          .container{
+               width: 96%;
+               display: flex;
+               flex-wrap: wrap;
+               flex-direction: column;
+          }
+          .container1{
+               width: 33.3333%;
+               height: 780px;
+          }
+          .container2{
+               width: 66.6666%;
+               height: 390px;
+          }
+          .box{
+               width: 66.6666%;
+               height: 390px;
+          }
+     }
+     @media(max-width:768px){
+          .container{
+               width: 100%;
+          }
+          .container1{
+               width: 40%;
+               height: 780px;
+          }
+          .container2{
+               width: 60%;
+               height: 260px;
+          }
+          .box{
+               width: 60%;
+               height: 520px;
+          }
+          .container3{
+               width: 100%;
+               height: 50%;
+          }
+          .container4{
+               width: 100%;
+               height: 50%;
+          }
+     }
+     @media(max-width:480px){
+          .container1{
+               width: 100%;
+               height: 150px;
+          }
+          .container2{
+               width: 100%;
+               height: 210px;
+          }
+          .box{
+               width: 100%;
+               height: 420px;
+          }
+     }
     </style>
 </head>
 <body>

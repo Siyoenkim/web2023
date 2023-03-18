@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃05 - flaot 유형</title>
-    <!-- 이 페이지의 특징 / 전체 배경이 들어감 노가다 방식 -->
+    <title>레이아웃05 - float 유형</title>
     <style>
         * {
             margin: 0;
@@ -17,74 +16,72 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #E0F2F1;
+            background-color: #EEEBE9;
         }
         #nav {
             width: 100%;
-            height: 300px;
-            background-color: #80CBC4;
+            height: 100px;
+            background-color: #B9AAA5;
         }
         #section {
             width: 100%;
-            height: 580px;
-            background-color: #26A69A;
-
+            height: 780px;
+            background-color: #886F65;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #26A69A;
+            background-color: #4E342E;
         }
-        .header__container {
+        .container {
             width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .container_1 {
+            width: inherit;
             height: 100px;
-            background-color: #B2DFDB;
-            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.2);
         }
-        .nav__container {
-            width: 1200px;
-            height: 300px;
-            background-color: #26A69A;
-            margin: 0 auto;
+        .container_2 {
+            width: inherit;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.3);
         }
-        .section__containder {
-            width: 1200px;
-            height: 580px;
-            background-color: #758f8c;
-            margin: 0 auto;
+        .container_3 {
+            width: 600px;
+            height: 480px;
+            background-color: rgba(0, 0, 0, 0.4);
+            float: left;
         }
-        .footer__containder {
-            width: 1200px;
-            height: 100px;
-            background-color: #0de3cd;
-            margin: 0 auto;
+        .container_4 {
+            width: 600px;
+            height: 480px;
+            background-color: rgba(0, 0, 0, 0.2);
+            float: left;
         }
     </style>
 </head>
 <body>
-        <div id="wrap">
-                <div id="header">
-                    <div class="header__container"></div>
-                </div>
-                <div id="nav">
-                    <div class="nav__container"></div>
-                </div>
-                <div id="section">
-                    <div class="section__containder"></div>
-                </div>    
-                <div id="footer">
-                    <div class="footer__containder"></div>
-                </div>    
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
         </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="container_1"></div>
+                <div class="container_2"></div>
+                <div class="container_3"></div>
+                <div class="container_4"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
 </body>
 </html>
-
-
-바디에 div 박스 네개 만들고 
-각 박스에 이름 넣어주기 왑 헤더 네비 섹선 푸터 div id=""
-타이틀 및 스타일 항목에 #wrap . . . 각각 넣어주기
-위드 값 백 하이트 비지씨 작업
-
-스타일 마진 영 패딩 영
-
-id는 중복해서 사용 불가능 class는 중복해서 사용 가능
