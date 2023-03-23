@@ -297,7 +297,7 @@
         searchBox.addEventListener("keyup", () => {
             const userWord = searchBox.value; //사용자가 입력한 키워드
 
-            searchList.forEach(el, i => {
+            searchList.forEach(el => {
                 // const cssName = el.getAttribute("data-name"); //방법1
                 const cssName = el.dataset.name;                //방법2
 
