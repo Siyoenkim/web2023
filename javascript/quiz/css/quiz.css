@@ -134,7 +134,7 @@
 }
 
 .quiz__question em {
-    color: #ac82ff;
+    color: #050505;
 }
 
 .quiz__answer {
@@ -155,6 +155,22 @@
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
+}
+
+.quiz__answer .next {
+    background-color: #ac82ff;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: 'DungGeunMo';
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.quiz__answer .next:hover {
+    background-color: #5e478e;
 }
 
 .quiz__answer .confirm:hover {
