@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+    <!-- SEO -->
+    <meta name="author" content="Hooong">
+    <meta name="description" content="Hooong's 사이트 튜토리얼">
+    <meta name="keyword" content="Hooong, 사이트, 사이트 만들기, 튜토리얼, 코딩, 웹디자인">
+    <meta name="robots" content="all">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="asset/ico/pencil.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="asset/ico/pencil.png">
+    <link rel="apple-touch-icon" href="asset/ico/pencil.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset/css/fonts.css">
+    <link rel="stylesheet" href="asset/css/reset.css">
+    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <link rel="stylesheet" href="asset/css/header.css">
+    <link rel="stylesheet" href="asset/css/slider.css">
+    <link rel="stylesheet" href="asset/css/image.css">
+    <link rel="stylesheet" href="asset/css/imgText.css">
+    <link rel="stylesheet" href="asset/css/card.css">
+    <link rel="stylesheet" href="asset/css/banner.css">
+    <link rel="stylesheet" href="asset/css/text.css">
+    <link rel="stylesheet" href="asset/css/footer.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">카드 영역바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- skip -->
+
+    <header id ="headerType"></header>
+        <h1>사이트 로고</h1>
+    <!-- header -->
+
+    <main id="mainType">
+        <section id="sliderType" class="nexon">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">Space</span>
+                        <h3 class="title">우주에 대한 흥미로운 사실🧑‍🚀</h3>
+                        <p class="desc">우주는 공간과 시간 그리고 행성, 항성, 은하 및 다른 모든 형태의 물질과 에너지를 포함하는 것인데 이에 대해 흥미롭고도 의외의 사실들을 한 번 알아보는 곳입니다.</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">Q&A</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <!-- sliderType -->
+
+        <section id="imageType" class="nexon section center">
+            <h2 class="blind">이미지 영역</h2>
+            <h2 class="section__h2">1분 지식</h2>
+            <p class="section__desc">스몰토크를 위한 얇고도 넓은 지식</p>
+
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="asset/image/imageType01_01.jpg" alt="얇고 넓은 지식">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title1">얇고 넓은 지식</h3>
+                        <p class="desc1">이 지식에는 여러 분야의 다양한 지식들이 포함됩니다. 
+                            철학, 역사, 예술, 과학, 경제학의 얇은 맛을 알려드립니다.</p>
+                        <a href="#" class="btn1">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure clss="image__header">
+                        <img src="asset/image/imageType01_02.jpg" alt="스몰토크">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title2">스몰토크</h3>
+                        <p class="desc2">낯선 사람들과 나누는 
+                            사소한 이야기에는 얇고 넓은 지식 만한 것이 없죠!</p>
+                            <a href="#" class="btn2">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- imageType -->
+
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">이미지 텍스트 영역</h2>
+            <div class="imgText__inner container">
+                <article class="text">
+                    <span>Egypt</span>
+                    <h3>고대 이집트의<br>
+                        문화
+                    </h3>
+                    <p>고대 이집트 문화는 다양한 측면에서 <br>매우 독특하고 
+                        흥미로운 요소들을 가지고 있습니다. <br>아래는 고대 이집트 문화의 주요 목록입니다.</p>
+                    <ul>
+                        <li>종교</li>
+                        이집트는 매우 다양한 종교적 신앙을 가졌습니다.
+                    <li>건축</li>
+                        대표적으로 피라미드가 있습니다.
+                    <li>문화적 예술</li>
+                        이들은 예술을 통해 신들을 숭배하며,
+                        다양한 상황과 <br>주제를 표현했습니다.
+                    <li>글씨체</li>
+                        이집트는 유명한 글씨체 중 하나인 
+                       "갈레오"라는 <br>글씨체를 만들어냈습니다.
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">피라미드</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">상형문자</a>
+                </article>
+            </div>
+        </section>
+        <!-- imgTextType -->
+
+        <section id="cardType" class="nexon section">
+            <div class="container">
+                <h2 class="section__h2">1분 지식</h2>
+                <p class="section__desc">인간 뇌는 하루에 약 7천 개의 생각을 하며, 이 중 대부분은 과거나 미래에 대한 걱정이나 상상을 한다는 것 알고 계신가요?<br>
+                    우리가 알지 못했던, 흥미로운 지식을 철학, 예술, 종교, 우주 등 전 분야에 걸쳐서 알아보겠습니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/image/_cradType01_01.jpg" alt="철학">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">철학</h3>
+                            <p class="desc">철학은 인간의 존재, 이해, 가치, 인식,사유, 윤리 등에 대한 깊은 질문을 다루는 분야로 인간이 무엇인지 대한 깊은 이해를 추구합니다. 철학철학철학철학철학철학철학철학</p>
+                            <a href="#" class="btn">자세히 보기
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/image/cardType01_02.jpg" alt="예술">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">예술</h3>
+                            <p class="desc">예술은 인간의 감정, 아름다움, 창조성, 상상력, 인간성 등을 표현하고 전달하는 창조적 활동으로 일종의 커뮤니케이션의 형태를 띄고 있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/image/cardType01_03.jpg" alt="우주">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">우주</h3>
+                            <p class="desc">우주는 모든 존재가 존재하는 공간으로, 끝없이 넓은 우주는 지구를 포함한 모든 행성,별, 은하, 검은 구멍, 중성체 등의 천체와 그들 사이의 거대한 공간으로 이루어져 있습니다</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- cardType -->
+
+        <section id="bannerType" class="nexon section banner__wrap center">
+            <h2 class="blind">배너 영역</h2>
+            <article class="banner__inner">
+                <h2>신화의 나라 이집트</h3>
+                <p>고대 이집트의 신화. 이집트 상형문자와 사자의 서가 거의 해독되면서 그 면모를 생생히 알 수 있으며<br>
+                    고대 이집트를 여행하였던 헤로도토스를 통해서도 일부 정보를 알 수 있습니다.</p>
+                <a href="https://youtu.be/KzH_YrtjeEM">https://youtu.be/KzH_YrtjeEM</a>
+            </article>
+        </section>
+        <!-- bannerType -->
+
+        <section id="textType" class="nexon section center">
+            <h2 class="blind">텍스트 영역</h2>
+            <span class="text__small">NOTICE</span>
+            <h2 class="section__h2 mb70">스몰토크를 위한 얇고 넓은 지식</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                     <h3 class="text__title">스몰토크란?</h3>
+                     <p class="text__desc">'서로 잘 모르는 사람들이 중요하지 않은 어떤 것에 대해서 나누는 대화'이지만 실제로는 일상적이고 소소한 주제로 대화를 하며며 상대방을 알아가는 것이 스몰토크라고 이해하셔도 됩니다.</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                     <h3 class="text__title">인도 영화는 왜 항상 춤을 출까?</h3>
+                     <p class="text__desc">인도는 지정된 공용어가 22가지나 됩니다.사투리 수준이 아닌 외국어와 다름 없는 경우가 많고 문맹률이 40% 이상이기 때문에 모두가 공감할 수 있는 춤을 넣게 된 것입니다.</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                     <h3 class="text__title">고대 그리스의 신성부대</h3>
+                     <p class="text__desc">고대 그리스의 도시국가(폴리스) 테베에 존재했던 정예 보병부대로 높은 공격력을 자랑하던 부대였습니다. 이 부대는 남성 동성 커플 150쌍으로 구성되어 있었다고 합니다.       </p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4"> 
+                     <h3 class="text__title">고양이와 심장병</h3>
+                     <p class="text__desc">고양이를 키우면 심장질환 위험이감소된다는 연구구가 있습니다.미국 미네소타대학 뇌졸중연구소에서 진행된 실험으로 고양이를 키우는사람은 심장질환으로 사망할 위험이 30%나 적다고합니다.</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                     <h3 class="text__title">아돌프 히틀러와 미술</h3>
+                     <p class="text__desc">아돌프 히틀러의 꿈은 화가였습니다. 비엔나 예술대의 미술학교에 진학하길 원했으나 입학시험에서 탈락하였고 오스트리아 빈의 미술학교에 지원서를 제출했으나 낙방하였습니다.</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                     <h3 class="text__title">1광년과 우리 은하</h3>
+                     <p class="text__desc">빛은 1초당 약 300,000km 속도로 움직입니다. 따라서 1광년, 즉 빛이 1년동안 이동할 수 있는 거리는 대략 9조 4607억 3057만이고 우리 은하의 지름은 약 105,700광년입니다.</p>
+                     <a class="text__btn" href="#">더보기</a>
+                </div>
+           </div>
+        </section>
+        <!-- textType -->
+    </main>
+    <!-- mainType -->
+
+    <footer id="footerType" class="gray">
+        <section class="section nexon gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="#">사이트 소개</a></li>
+                        <li><a href="#">사이트 이용안내</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>다큐멘터리</h3>
+                    <ul>
+                        <li><a href="#">생명의 전략, 기생</a></li>
+                        <li><a href="#">여섯번째 대멸종</a></li>
+                        <li><a href="#">갈라파고스</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>도서</h3>
+                    <ul>
+                        <li><a href="#">소개하기</a></li>
+                        <li><a href="#">알쓸신잡</a></li>
+                        <li><a href="#">얇고 넓은 지식</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>유투브</h3>
+                    <ul>
+                        <li><a href="#">지식은 날리지</a></li>
+                        <li><a href="#">당신이 모르는 사실</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Q&A</h3>
+                    <ul>
+                        <li><a href="#">질문하기</a></li>
+                        <li><a href="#">건의하기</a></li>
+                        <li><a href="#">도움주기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>정보</h3>
+                    <ul>
+                        <li><a href="#">사이트 만든 이</a></li>
+                    </ul>
+                </div>
+            </div>
+            <address class="footer__right">
+                2023 얇고 넓은 대화를 위한 1분 지식 knowledge<br>
+                All Right Reserved
+            </address>
+        </div>
+    </section>
+    </footer>
+    <!-- footerType -->
+</body>
+</html>

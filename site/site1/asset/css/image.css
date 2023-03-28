@@ -1,0 +1,81 @@
+/* image__type */
+     
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image__inner .image {
+    width: 49%;
+    background-color: #5e5e5e;
+    position: relative;
+}
+.image__body {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    text-align: left;
+    padding: 30px;
+}
+.image__body .title1 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.image__body .title2 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 15px;
+    color: #01346B;
+}
+.image__body .desc1 {
+    margin-bottom: 15px; 
+    line-height: 1.5;;
+    padding-right: 20%;
+}
+.image__body .desc2 {
+    margin-bottom: 15px; 
+    line-height: 1.5;;
+    padding-right: 20%;
+    color: #01346B;
+}
+.image__body .btn1 {
+    color: #01346B;
+    background-color: #E6E6E6;;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+.image__body .btn2 {
+    color: #fff;
+    background-color: #01346B;;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 960px){
+    .image__body .desc1 {
+        display: none;
+    }
+    .image__body .desc2 {
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    .image__inner {
+        flex-direction: column;
+    }
+    .image__inner .image{
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .image__inner .title{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .image__inner .btn{
+       padding: 10px 20px;
+       font-size: 14px;
+    }
+}
