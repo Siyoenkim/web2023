@@ -22,7 +22,7 @@
             <li><a href="quizEffect05.html">5</a></li>
             <li><a href="quizEffect05_design.html">5-2</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
-
+            <li><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -34,12 +34,13 @@
                         <h2 class="quiz__title"></h2>
                 </div>
                 <div class="quiz__main">
-                    <h3></h3>
+                    <!-- <h3></h3> -->
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
                              <div class="true">정답🥰</div>
                             <div class="false">오답😩</div>
+                            <div class="count"></div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -163,21 +164,22 @@
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const dogWrapCount = quizWrap.querySelector(".dog__wrap .count");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
-        const dogHeader = quizWrap.querySelector(".quiz__main h3")
+        // const dogHeader = quizWrap.querySelector(".quiz__main h3")
 
         let quizCount = 0;
         let quizScore = 0;
-
+        
         // quizTitle.innerHTML = quizInfo[0].infoType; 정보처리 기능사 나오게 하기
 
         //문제출력
         const updateQuiz = (index) =>{
-            let dogHeaderTag = `
-                ${quizInfo.length - quizCount} 문제 남았습니다. 
-            `;
+            // let dogHeaderTag = `
+            //     ${quizInfo.length - quizCount} 문제 남았습니다. 
+            // `;
           
             let typeTag = `
                 <span>${quizInfo[index].infoType}</span>
@@ -216,7 +218,13 @@
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            dogHeader.innerHTML = dogHeaderTag;
+            // dogHeader.innerHTML = dogHeaderTag;
+
+            let quizLength = quizInfo.length - quizCount; // 값을 제대로 구했는지를 알 수 없기 때문에 항상 콘솔로그로 확인 해야한다. clg(quizinfo.length);
+            dogWrapCount.innerHTML = "총 " + quizInfo.length + "문제 중에 " + ( quizLength-1 ) + "문제가 남았습니다.";
+            //1. 5문제 중에 3문제가 남았습니다.
+            // 5문제를 먼저 변수화 시켜준 뒤에 "문제 중에 n문제 남았습니다"를 변수화
+            //quizcount는 문제 번호를 의미한다.
 
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -257,9 +265,20 @@
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
 
-            if(quizInfo.length - quizCount == 1){
-                alert(quizScore + "개 맞았습니다." + Math.ceil((quizScore / quizInfo.length) * 100) + "점 입니다.");
-            };
+            let countLast = Math.ceil((quizScore/quizInfo.length)*100); // 점수내기
+            let countResult = (countLast > 60) ? "합격" : "불합격";
+            
+
+            //마지막 문제일 때
+            if(quizCount == quizInfo.length - 1){
+                quizAnswer.style.display = "none";
+                dogWrapCount.innerHTML = "문제를 다 풀었습니다. 축하합니다!<br> 총" + quizScore + "문제를 맞추었습니다. 점수는 " + countLast + "점입니다. " + countResult + "입니다."
+            }
+
+            // if(quizInfo.length - quizCount == 1){
+            //     alert(quizScore + "개 맞았습니다." + Math.ceil((quizScore / quizInfo.length) * 100) + "점 입니다.");
+            // };
+
         };
 
         //정답 확인

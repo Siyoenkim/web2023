@@ -1,5 +1,6 @@
 @import url('https://webfontworld.github.io/DungGeunMo/DungGeunMo.css');
 @import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
 
 * {
     margin: 0;
@@ -15,10 +16,12 @@ a {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-h3 {
+.count {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    margin: 15px;
 }
+
 li, ul, ol {
     list-style: none;
 }
