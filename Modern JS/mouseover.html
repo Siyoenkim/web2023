@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 30px;
+            text-align: center;
+        }
+    
+        .image__wrap img {
+            flex-wrap: wrap;
+            width: 30%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <h1> 마우스 오버하면 이미지 바꾸기 </h1>
+</head>
+<body>
+    <main id="main">
+        <div class="image__wrap">
+            <img src="img1.jpg" alt="바닷속" class="A">
+            
+        </div>
+    </main>
+
+    <script>
+        const imageAll = document.querySelector(".image__wrap .A");
+
+        document.querySelector(".image__wrap .A").addEventListener('mouseenter', () => {
+	        imageAll.src = "img1.jpg";
+        });
+
+        document.querySelector(".image__wrap .A").addEventListener('mouseleave', () => {
+	        imageAll.src = "img2.png";
+        });
+    </script>
+</body>
+</html>

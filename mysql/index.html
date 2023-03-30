@@ -216,6 +216,15 @@ regTime int(30) NOT NULL,
 PRIMARY KEY(memberID)
 ) charset=utf8;
 </code></pre>
+
+<pre><code class="language-js">create table reviews(
+reviewID int(10) unsigned auto_increment,
+memberID int(10) unsigned,
+youText tinytext NOT NULL,
+regTime int(30) NOT NULL,
+PRIMARY KEY(reviewID)
+) charset=utf8;
+</code></pre>
                     <h4 id="intro5-2" class="page-header">테이블 전체보기</h4>
                     <div class="bs-callout bs-callout-info">show tables;</div>
 <pre><code class="language-js">mysql> show tables;
@@ -288,7 +297,19 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
-</code></pre>    
+</code></pre>
+
+<div class="bs-callout bs-callout-info"><code>INSERT</code> INTO <code>FROM</code> 테이블명(필드명)<code>VALUES</code></div>
+<pre><code class="language-js">
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "정말 감사합니다.", "12345");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "별로", "234");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "이건 사야해!", "778");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "감사합니다.", "1233335");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "멋진내용이네요", "345");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "이거 사기에요", "9975");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("21", "개이득", "5447");
+ INSERT INTO reviews(memberID, youText, regTime) VALUES("745", "고맙습니다.", "446");
+</code></pre>
                    
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
                     <div class="bs-callout bs-callout-info"><code>SELECT</code> 필드명 <code>FROM</code> 테이블명 <code>WHERE</code> 조건</div>
