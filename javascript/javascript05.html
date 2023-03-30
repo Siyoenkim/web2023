@@ -79,8 +79,8 @@
                     <li><a href="#sample28">28. <strong>string.prototype.toUpperCase()</strong> :        메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample29">29. <strong>string.prototype.toString()</strong> :           메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
                     <li><a href="#sample30">30. <strong>string.prototype.trim()⭐</strong> :               메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong> :            메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong> :          메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample31">31. <strong>string.prototype.trimStart()</strong> :            메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample32">32. <strong>string.prototype.trimEnd()</strong> :          메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample33">33. <strong>string.prototype.valueOf()</strong> :            메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
@@ -299,6 +299,161 @@ console.log("javascript reference".search("javascript"));
                         </div>
                     </div>
                     <!-- sample18 -->
+                    <div id="sample19" class="sample">
+                        <h3>06. slice()</h3>
+                        <div class="notice">⭐ "배열".slice(시작 위치, [끝나는 위치])</div>
+                        <ul>
+                            <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
+                            <li></li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">"javascript".slice(0);   
+"javascript".slice(1);          
+"javascript".slice(2);          
+"javascript".slice(0, 1);       
+"javascript".slice(1, 2);       
+"javascript".slice(0, 2);       
+"javascript".slice(0, 3);     
+"javascript".slice(5, 10);      
+"javascript".slice(5, -1);     
+"javascript".slice(5, -2);     
+"javascript".slice(-1);         
+"javascript".slice(-2);       
+"javascript".slice(-3);         
+"javascript".slice(-3, -1);     
+"javascript".slice(-3, -2);     
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    javascript<br>
+                                    avascript<br>
+                                    vascript<br>
+                                    j<br>
+                                    a<br>
+                                    ja<br>
+                                    jav<br>
+                                    cript<br>
+                                    crip<br>
+                                    cri<br>
+                                    t<br>
+                                    pt<br>
+                                    ipt<br>
+                                    ip<br>
+                                    i<br>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- sample 19 -->
+                    <div id="sample22" class="sample">
+                        <h3>22. split()</h3>
+                        <div class="notice">⭐"문자열".split(구분자, [제한])</div>
+                        <ul>
+                            <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                            <li></li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">"javascript".split("");     
+"java script".split("");             
+"java scr ipt".split("");           
+
+"javascript".split("",1);           
+"javascript".split("",2);          
+"javascript".split("",3);           
+
+"java script".split(" ",1);         
+"java script".split(" ",2);          
+
+"javascript".split("j");            
+"javascript".split("a");            
+"javascript".split("e");         
+
+"java/scr/ipt".split("/");        
+"java&scr!ipt".split("&");          
+"java&scr!ipt".split("!");          
+"java&scr!ipt".split("/&|\!/");     
+
+"javascript".split("").join();                
+"javascript".split("*").join();                 
+"javascript".split("").reverse().join();       
+"javascript".split("").reverse().join("/");   
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    ['j','a','v','a','s','c','r','i','p','t']<br>
+                                    ['java', 'script']<br>
+                                    ['java', 'scr', 'ipt']<br>
+
+                                    ['j']<br>
+                                    ['j','a']<br>
+                                    ['j','a','v']<br>
+
+                                    ['java']<br>
+                                    ['java', 'script']<br>
+
+                                    ['', 'avascript']<br>
+                                    ['j','v','script']<br>
+                                    ['javascript']<br>
+
+                                    ['java', 'scr', 'ipt']<br>
+                                    ['java', 'scr!ipt']<br>
+                                    ['java&scr', 'ipt']<br>
+                                    ['java', 'scr', 'ipt'] 정규식표현<br>
+
+                                    j,a,v,a,s,c,r,i,p,t<br>
+                                    j*a*v*a*s*c*r*i*p*t<br>
+                                    t,p,i,r,c,s,a,v,a //리버스는 문자열에서만<br>
+                                    t/p/i/r/c/s/a/v/a
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- sample 22 -->
+                    <div id="sample30" class="sample">
+                        <h3>30. trim()</h3>
+                        <div class="notice">⭐ "문자열".trim()</div>
+                        <ul>
+                            <li>문자열의 앞뒤 공백을 제거하고 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">"javascript".trim("");                //javascript
+"javascript ".trim("");               //javascript
+" javascript".trim("");               //javascript
+" javascript".trim("");               //java script
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample 30 -->
+                    <div id="sample31" class="sample">
+                        <h3>31. trimStart()</h3>
+                        <div class="notice">⭐ "문자열".trimStart()</div>
+                        <ul>
+                            <li>문자열의 <strong>앞 공백을 제거</strong>하고, 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js"> " javascript".trimStart("");          //javascript
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample 31 -->
+                    <div id="sample32" class="sample">
+                        <h3>32. trimEnd()</h3>
+                        <div class="notice">⭐ "문자열".trimEnd()</div>
+                        <ul>
+                            <li>문자열의 <strong>뒤 공백을 제거</strong>하고, 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js"> "javascript ".trimEnd("");          //javascript
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample32 -->
                 </div>
         </div>
 
@@ -313,86 +468,44 @@ console.log("javascript reference".search("javascript"));
     <script>hljs.highlightAll();</script>
 
     <script>
-        // // ⭐
-        // "javascript refercence".indexOf("javascript");              //0 
-        // "javascript refercence".indexOf("javascripts");             //-1  s가 붙으면 -1
-        // "javascript refercence".indexOf("j");                       //0  
-        // "javascript refercence".indexOf("J");                       //-1
-        // "javascript refercence".indexOf("a");                       //1  두번째 a가 나오고싶게 하려면 lastindexOf
-        // "javascript refercence".indexOf("ja");                      //0 
-        // "javascript refercence".indexOf("jv");                      //-1
-        // "javascript refercence".indexOf("r");                       //6
-        // "javascript refercence".indexOf("re");                      //11
-        // "javascript refercence".indexOf("javascript", 0);           //0
-        // "javascript refercence".indexOf("javascript", 1);           //-1
-        // "javascript refercence".indexOf("javascript", 0);           //11
-        // "javascript refercence".indexOf("javascript", 11);          //11
-        // "javascript refercence".indexOf("javascript", 12);          //-1
-        // "javascript refercence".indexOf("r", 7);                    //11
-        // "javascript refercence".indexOf("r", 12);                   //15
+       "javascript".split("");              //['j','a','v','a','s','c','r','i','p','t']
+       "java script".split("");             //['java', 'script']
+       "java scr ipt".split("");            //['java', 'scr', 'ipt']
 
+       "javascript".split("",1);            //['j']
+       "javascript".split("",2);            //['j','a']
+       "javascript".split("",3);            //['j','a','v']
 
-        // console.log("javascript refercence".indexOf("javascript"));
-        
-        //-----
+       "java script".split(" ",1);          //['java']
+       "java script".split(" ",2);          //['java', 'script']
 
-        // console.log("javascript refercence".indexOf("javascript", 0)); //자바스크립트라는 단어를 0부터 찾아라
+       "javascript".split("j");             //['', 'avascript']
+       "javascript".split("a");             //['j','v','script']
+       "javascript".split("e");             //['javascript']
 
-        "javascript reference".includes("javascript"); //true
-        "javascript reference".includes("j");          //true
-        "javascript reference".includes("J");          //false
-        "javascript reference".includes("a");          //true
-        "javascript reference".includes("reference"); //true
-        "javascript reference".includes("reference, 11"); //true
-        "javascript reference".includes("reference, 12"); //false
+       "java/scr/ipt".split("/");           //['java', 'scr', 'ipt'] 
+       "java&scr!ipt".split("&");           //['java', 'scr!ipt'] 
+       "java&scr!ipt".split("!");           //['java&scr', 'ipt'] 
+       "java&scr!ipt".split("/&|\!/");      //['java', 'scr', 'ipt'] 정규식표현
 
+       "javascript".split("").join();                  //j,a,v,a,s,c,r,i,p,t
+       "javascript".split("*").join();                 //j*a*v*a*s*c*r*i*p*t
+       "javascript".split("").reverse().join();        //t,p,i,r,c,s,a,v,a //리버스는 문자열에서만
+       "javascript".split("").reverse().join("/");        //t/p/i/r/c/s/a/v/a 
 
-        console.log("javascript reference".includes("javascript"))
-        
-        //---
+       console.log("javascript".split("").join());
 
-        "javascript reference".search("javascript");    //0
-        "javascript reference".search("reference");     //11
-        "javascript reference".search("r");             //6
-        "javascript reference".search("a");             //1
-        "javascript reference".search("jv");             //-1
-        "javascript reference".search("J");             //-1
-        "javascript reference".search(/reference/);             //11
-        "javascript reference".search(/Reference/);             //-1
-        "javascript reference".search(/Reference/i);             //11 i를 쓰면 대문자를 소문자로
-        "자바스크립트".search(/[a-z]/g);             //-1 g는 글로벌. 전체 다 확인한다는 뜻
+       //trim
+       "javascript".trim("");                //javascript
+       "javascript ".trim("");               //javascript
+       " javascript".trim("");               //javascript
+       " javascript".trim("");               //java script
 
-        console.log("javascript reference".search("javascript"));
+       " javascript".trimStart("");          //javascript
+       "javascript ".trimEnd("");          //javascript
 
-        //---
+       console.log("java script".trim());
 
-        "javascript reference".match("javascript");     //"javascript"
-        "javascript reference".match("reference");     //"reference"
-        "javascript reference".match("r");     //"r"
-        "javascript reference".match("R");     //null
-        "javascript reference".match("ja");     //"ja"
-        "javascript reference".match(/reference/);     // reference 정규식 표현
-        "javascript reference".match(/Reference/);     // null
-        "javascript reference".match(/Reference/i);     // reference
-        "javascript reference".match(/Reference/g);     // reference
-        "javascript reference".match(/r/);     // reference
-        "javascript reference".match(/r/g);     // r r r 
-        "javascript reference".match(/w/g);     // null
-        "javascript reference".match(/R/ig);     // r r r
-
-        
-        console.log("javascript reference".match("javascript"));
-
-        //---
-        "javascript reference".lastIndexOf("javascript"); //0
-        "javascript reference".lastIndexOf("javascripts"); //-1
-        "javascript reference".lastIndexOf("j"); //0
-        "javascript reference".lastIndexOf("a"); //3
-        "javascript reference".lastIndexOf("jv"); //-1
-        "javascript reference".lastIndexOf("reference"); //11
-        "javascript reference".lastIndexOf("r"); //15
-
-        console.log("javascript reference".match("javascript"));
     </script>
 </body>
 </html>
