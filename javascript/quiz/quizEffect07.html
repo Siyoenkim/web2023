@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트06</title>
+    <title>퀴즈 이펙트07</title>
 
     <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -82,8 +82,8 @@
                     <div>
                         <div class="cbt__title">수험자 : <em>김시연</em></div>
                         <div class="cbt__score">
-                            <span>전체 문제수 : <em>60</em>문항</span>
-                            <span>남은 문제수 : <em>59문항</em></span>
+                            <span>전체 문제수 : <em class="total__count"></em>문항</span>
+                            <span>남은 문제수 : <em class="last__count"></em>문항</span>
                         </div>
                     </div>
                 </div>
@@ -120,8 +120,10 @@
     
     <script>
     const cbtQuiz = document.querySelector(".cbt__quiz");
-    const cbtOmr = document.querySelector(".cbt__omr")
-    const cbtSubmit = document.querySelector(".cbt__submit")
+    const cbtOmr = document.querySelector(".cbt__omr");
+    const cbtSubmit = document.querySelector(".cbt__submit");
+    const totalCount = document.querySelector(".total__count");
+    const lastCount = document.querySelector(".last__count");
 
     let questionAll = []; // 모든 퀴즈 정보
 
@@ -158,6 +160,12 @@
                 if(item.hasOwnProperty("desc")){
                     formattedQuestion.desc = item.desc;
                 }
+
+                //전체문제
+                totalCount.innerHTML = items.length;
+
+                //나머지문제
+                lastCount.innerHTML = items.length;
 
                 //키워드가 있으면 출력
                 // if(item.hasOwnProperty("keyword")){
@@ -256,8 +264,14 @@
     
 
     const answerSelect = () => {
+        const checkLength = document.querySelectorAll('input[type="radio"]:checked').length;
 
-    }
+        const naMuge = questionAll.length - checkLength;
+
+        lastCount.innerText = naMuge;
+
+        return naMuge;
+    };
 
     cbtSubmit.addEventListener("click", answerQuiz);
     dataQuestion();
