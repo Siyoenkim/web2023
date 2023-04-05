@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz07base.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>  
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png"/> 
-    <link rel="apple-touch-icon" href="img/favicon.png"/>
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" type="image/x-icon" href="../quiz/img/pencil.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../quiz/img/pencil.png">
+   <link rel="apple-touch-icon" href="../quiz/img/pencil.png">
+
 
 </head>
 <body>
@@ -24,7 +26,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li><a href="quizEffect06.html">6</a></li>
-            <li class="active"><a href="quizEffect07.html">7</a></li>
+            <li class="active"><a href="quizEffect07base.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -189,9 +191,9 @@
             questionTime = setInterval(reduceTime, 1000);
         }
 
-        //데이터 가져오기
+        //데이터 가져오기 `https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`
         const dataQuestion = (value) => {
-            fetch("json/gineungsaJC2008_02.json") // 가운데 이름을 ${value}로 바꾸면 바뀐다.
+            fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`) // 가운데 이름을 ${value}로 바꾸면 바뀐다.
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -246,7 +248,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img">${question.question_img}</div>
+                        <div class="cbt__question__img"><img src="https://kebab000.github.io/web2023/gineungsaJPG/${question.question_img}.jpg" alt="시험이미지"></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
@@ -279,6 +281,22 @@
         
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+
+            //설명 없는 것 제거
+            document.querySelectorAll(".cbt__question__desc").forEach(desc => {
+                if( desc.innerHTML === "undefined") {
+                    desc.classList.add("hide")
+                }
+            });
+
+            //이미지가 없는거 제거
+            document.querySelectorAll(".cbt__question__img").forEach(img => {
+                let src = img.querySelector("img").src;
+
+                if(src.includes("undefined")){
+                    img.classList.add("hide");
+                }
+            })  
         }
 
         //정답 확인
@@ -336,7 +354,7 @@
             const label = select[answerNum[0]].querySelectorAll("input");   //보기 4개
             label[answerNum[1]-1].checked = true;
 
-            const answerInputs = document.querySelectorAll(".cbt__selects input:checked")
+            const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
             cbtRest.innerHTML = questionLength - answerInputs.length;
         }
 
@@ -396,7 +414,6 @@
 
         cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
-        dataQuestion();
     </script>
 </body>
 </html>

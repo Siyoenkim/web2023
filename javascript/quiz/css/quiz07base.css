@@ -1,3 +1,4 @@
+
 /* header */
 #header {
     position: fixed;
@@ -483,7 +484,7 @@
 }
 .cbt__selects label.correct span::before {
     border-color: red;
-    box-shadow: inset 0 0 0 10px ;
+    box-shadow: inset 0 0 0 10px red;
     color: #fff;
 }
 .cbt__selects label span {
