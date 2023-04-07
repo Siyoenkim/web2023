@@ -61,9 +61,10 @@
                     <div>
                     <button class="cbt__submit">제출하기</button>
                     <span class="cbt__time">59분 10초</span>
+                    <div class="cbt__result hide"></div>
                     </div>
                     <div>
-                        <div class="cbt__title">수험자 : <em>김시연</em></div>
+                        <div class="cbt__title">수험자 : <em></em></div>
                         <div class="cbt__score">
                             <span>전체 문제수 : <em class="cbt__length">0</em>문항</span>
                             <span>남은 문제수 : <em class="cbt__rest">0</em>문항</span>
@@ -148,8 +149,8 @@
                         </select>
                     </div>
                     <div class="cbt__view">
-                        당신의 이름은  <input type = "text" class="name"> 입니다.
-                        당신은 <span class="subject">웹디자인 기능사시험</span>을 선택했습니다.
+                        성함을 입력해주세요 <input type = "text" class="name"> 입니다.
+                        선택한 회차는 <span class="subject"></span>입니다.
                     </div>
                     <button class="cbt__start__btn">시작하기</button>
                 
@@ -165,13 +166,17 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        const cbtName = document.querySelector(".cbt__title em");
         const cbtRest = document.querySelector(".cbt__rest");
         const cbtLength = document.querySelector(".cbt__length");
-        const cbtViewsubject = document.querySelector(".cbt__view .subject");
+        const cbtViewSubject = document.querySelector(".cbt__view .subject");
         const cbtHeader = document.querySelector(".cbt__header h2");
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
+        const nameInput = document.querySelector(".cbt__view input");
+        const cbtResult = document.querySelector(".cbt__result");
+
 
 
         // const cbtIndex2 = document.querySelector(".cbt__index");
@@ -180,7 +185,8 @@
         let questionLength = 0; //전체 문제수
         let questionRest = questionLength; //남은 문제수
         let questionTime = "";
-        let questionTimeRemain = "1000";
+        let questionTimeRemain = "3600";
+        let great = 0;
 
         //시작하기
 
@@ -189,6 +195,11 @@
 
             //시간 설정
             questionTime = setInterval(reduceTime, 1000);
+
+             // 이름 받아오기
+            let youName = nameInput.value;
+
+            cbtName.innerHTML = youName;
         }
 
         //데이터 가져오기 `https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`
@@ -310,9 +321,10 @@
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
                 if(numberAnswer == question.answer){
+                    great++;
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
-                } else {
+                } else{
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
                     
@@ -330,7 +342,14 @@
                     quizDesc[number].classList.remove("hide");
                 }
             });
-        }
+            // 점수 알려주기
+            let score = Math.ceil((great/questionAll.length)*100);
+            cbtResult.innerHTML = `총 ${great}개 맞았습니다.<br>점수는${score}점 입니다.`
+
+            // 제출버튼 숨기기, 점수 보이기
+            cbtSubmit.classList.add("hide");
+            cbtResult.classList.remove("hide");
+        };
 
         // 보기 체크
         const answerSelect2 = (elem) => {
@@ -379,8 +398,8 @@
             let selectValue = e.value;
             let selectText = e.options[e.selectedIndex].text;
 
-            cbtViewsubject.innerText = selectText;
-            cbtHeader.innerText = selectText;
+            cbtViewSubject.innerHTML = selectText;
+            cbtHeader.innerHTML = selectText;
             
             dataQuestion(selectValue);
         }
@@ -391,7 +410,7 @@
 
             if(questionTimeRemain == 0) endQuiz();
 
-            cbtTime.innerText = displayTime();
+            cbtTime.innerHTML= displayTime();
         }
 
         //시간 표시 , 리턴에는 결과의 의미와 종료의 의미가 있다. 여기는 둘 다 해당된다.
@@ -402,8 +421,12 @@
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let seconds = questionTimeRemain % 60;
 
-                return minutes + "분" + seconds + "초";
-                //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
+               // 초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
+               if(seconds < 10){
+                    return minutes + "분" + "0"+seconds+ "초"
+                } else {
+                    return minutes + "분" + seconds + "초"
+                }
             }
         }
 
