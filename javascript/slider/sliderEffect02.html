@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01. 슬라이드 이펙트</title>
+    <title>02. 슬라이드 이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
     <style>
@@ -133,7 +133,7 @@
             currentIndex = (currentIndex + 1) % $(".slider").length;
 
             $(".slider__inner").css("position", "relative")
-;            $(".slider__inner").animate({left : -800 * currentIndex}, 600, "easeOutElastic");
+;            $(".slider__inner").animate({left : -800 * currentIndex}, 600);
         }, sliderInterval);
         //제이쿼리는 트렌스x를 지원안하기 때문에 left사용, left면 포지션이 필요함
     </script>
