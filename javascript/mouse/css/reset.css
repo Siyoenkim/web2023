@@ -19,34 +19,34 @@ body {
     background-size: cover;
 }
 body.img01 {
-    background-image: url(../img/mouseEffect01-min.jpg);
+    background-image: url(../img/mouseEffect01.jpg);
 }
 body.img02 {
-    background-image: url(../img/mouseEffect02-min.jpg);
+    background-image: url(../img/mouseEffect02.jpg);
 }
 body.img03 {
-    background-image: url(../img/mouseEffect03-min.jpg);
+    background-image: url(../img/mouseEffect03.jpg);
 }
 body.img04 {
-    background-image: url(../img/mouseEffect04-min.jpg);
+    background-image: url(../img/mouseEffect04.jpg);
 }
 body.img05 {
-    background-image: url(../img/mouseEffect05-min.jpg);
+    background-image: url(../img/mouseEffect05.jpg);
 }
 body.img06 {
-    background-image: url(../img/mouseEffect06-min.jpg);
+    background-image: url(../img/mouseEffect06.jpg);
 }
 body.img07 {
-    background-image: url(../img/mouseEffect07-min.jpg);
+    background-image: url(../img/mouseEffect07.jpg);
 }
 body.img08 {
-    background-image: url(../img/mouseEffect08-min.jpg);
+    background-image: url(../img/mouseEffect08.jpg);
 }
 body.img09 {
-    background-image: url(../img/mouseEffect09-min.jpg);
+    background-image: url(../img/mouseEffect09.jpg);
 }
 body.img10 {
-    background-image: url(../img/mouseEffect10-min.jpg);
+    background-image: url(../img/mouseEffect10.jpg);
 }
 body::after {
     content: '';
