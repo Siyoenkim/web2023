@@ -89,6 +89,7 @@
             <li><a href="sliderEffect04.html">4</a></li>
             <li><a href="sliderEffect05.html">5</a></li>
             <li class="active"><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -142,21 +143,42 @@
 
             //첫 번째 닷 메뉴한테 활성화 표시하기
             sliderDot.firstChild.classList.add("active");
+
+            // 닷버튼 클릭
+            const dotClick = sliderWrap.querySelectorAll(".slider__dot .dot")
+            dotClick.forEach((el, index) => {
+                el.addEventListener("click", () => {
+                    gotoSlider(index);
+                });
+            });
         }
         init();
 
         //이미지 이동시키기 => 해당 이미지로 찾아갈 수 있게끔.
         function gotoSlider(num){
-            console.log(num);
-        }
+            sliderInner.style.transition = "all 400ms";
+            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+            currentIndex = num
 
-        //버튼을 클릭했을 때
+            let dotActive = document.querySelectorAll(".slider__dot .dot");
+            dotActive.forEach((active) => {
+                active.classList.remove("active");
+            });
+            // = dotActive.forEach((active) => active.classList.remove("active"));
+            dotActive[num].classList.add("active");
+        }
+        
+
+        //버튼을 클릭했을 때, gotoslider(3),4,5 사용
         sliderBtn.forEach((btn, index) => {
             btn.addEventListener("click", () => {
+                let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount;
+                let nextIndex = (currentIndex + 1) % sliderCount;
+
                 if(btn.classList.contains("prev")){
-                    gotoSlider(1)
+                    gotoSlider(prevIndex);
                 } else {
-                    gotoSlider(10);
+                    gotoSlider(nextIndex);
                 }
             });
         });
