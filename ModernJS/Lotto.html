@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Oswald);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+        @import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+        #lotto {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid #000; */
+        }
+        button {
+            width: 400px;
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 40px;
+            background-color: #fff;
+        }
+        #result {
+            padding: 20px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        body {
+            background-color: #111111;
+            color: #fff;
+        }
+
+        #container {
+            margin: 0 auto;
+            max-width: 520px;
+            text-align: center;
+            padding-top: 300px;
+        }
+
+        #container h1 {
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 0.3125em 0;
+            background-color: #111111;
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 30px;
+        }
+        .style-1 {
+            font-family: "Pacifico", sans-serif;
+            text-transform: none!important;
+            color: #fff;
+        }
+        .style-1:before {
+            content: "";
+            height: 3px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            position: absolute;
+            width: 300%;
+            top: 50%;
+            left: -100%;
+            z-index: -999;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 class="style-1">🍀Lotto🍀</h1>   
+        <button>Click!</button> 
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+    let button = document.querySelector("button");
+    let result = document.querySelector("#result");
+
+    function lottoNumber(){
+        let randomLotto = new Set();
+
+        for(let i=1; i<=6; i++){
+            randomLotto.add(Math.floor(Math.random() * 45) + 1);
+        }
+        result.innerText = [...randomLotto];
+    }
+    button.addEventListener("click", lottoNumber);
+    </script>
+</html>

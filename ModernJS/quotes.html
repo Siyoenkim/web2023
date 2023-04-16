@@ -4,18 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ModernJS - Json</title>
+    <link href="https://webfontworld.github.io/goodchoice/Jalnan.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "goodchoice";
+        }
+        img {
+            margin: 0 auto;
+            width: 80%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 150px;
+        }
+        #result {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        .quote {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+        .author {
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
+    <img src="img/MR.jpeg" alt="쏘큣베베">
+    <div id="result">
+        <div class="quote"></div>
+        <div class="author"></div>
+    </div>
     <script>
+    let currentIndex = 0;
+
     function quotes(){
         fetch("json/quotes.json")
         .then(res => res.json())
         .then(items => {
-            console.log(items); 
-    })
-};
-quotes();                 
+            const result = document.querySelector("#result");
+            const quote = result.querySelector(".quote");
+            const author = result.querySelector(".author");
+
+            quote.innerHTML = items.quote[currentIndex].quote;
+            author.innerHTML = `-${items.author[currentIndex].author}`;
+
+            currentIndex = (currentIndex + 1) % items.quote.length;
+        })
+        .catch((err) => console.log(err));
+    };
+    quotes();
+
+    setInterval(quotes, 5000);
     </script>
 </body>
 </html>
