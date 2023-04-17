@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModernJS - Json</title>
-    <link href="https://webfontworld.github.io/goodchoice/Jalnan.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,8 +22,8 @@
         }
         #result {
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 6%;
+            top: 35%;
         }
         .quote {
             font-size: 50px;
@@ -34,11 +33,17 @@
             font-size: 35px;
             color: rgba(0, 0, 0, 0.5);
         }
+        .id {
+            font-size: 45px;
+            color: #000;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <img src="img/MR.jpeg" alt="쏘큣베베">
     <div id="result">
+        <div class="id"></div>
         <div class="quote"></div>
         <div class="author"></div>
     </div>
@@ -52,11 +57,15 @@
             const result = document.querySelector("#result");
             const quote = result.querySelector(".quote");
             const author = result.querySelector(".author");
+            const num = result.querySelector(".id");
 
-            quote.innerHTML = items.quote[currentIndex].quote;
-            author.innerHTML = `-${items.author[currentIndex].author}`;
+            currentIndex = (currentIndex + 1) % items.quotes.length;
 
-            currentIndex = (currentIndex + 1) % items.quote.length;
+            console.log(items.quotes.length);
+
+            quote.innerHTML = items.quotes[currentIndex].quote;
+            author.innerHTML = `-${items.quotes[currentIndex].author}`;
+            num.innerHTML = items.quotes[currentIndex].id;
         })
         .catch((err) => console.log(err));
     };

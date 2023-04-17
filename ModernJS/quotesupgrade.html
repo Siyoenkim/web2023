@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명언</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-style: "NexonLv1Gothic";
+        }
+        .bgImg {
+            width: 80%;
+            height: 100vh;
+            display: flex;
+        }
+        .section {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 1px;
+            z-index: 1000;
+            padding: 20px 50px;
+            background-color: rgba(255, 255, 255, 255);
+        }
+        .quote {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+        .author {
+            font-size: 20px;
+            color: rgba(87, 87, 87, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        <section class="section">
+            <div class="quote"></div>
+            <div class="author"></div>
+        </section>        
+        <img class="bgImg" src="https://source.unsplash.com/random/?cat" alt="배경">
+    </div>
+    <script>
+        function imgLoad(){
+            let bgImg = document.querySelector(".bgImg");
+            bgImg.src = `https://source.unsplash.com/random/?cat=${new Date().getTime()}`;
+        }
+        imgLoad();
+
+        function nextQuote(){
+            fetch("json/quotes.json")
+            .then(res => res.json())
+            .then(items => {
+                // console.log(items); // 문제의 데이터 불러오기
+                const random = Math.floor(Math.random()*30); // 1~29까지의 수 구하기
+                // console.log(random);
+    
+                const quote = result.querySelector(".quote");
+                const author = result.querySelector(".author");
+    
+                quote.innerHTML = items.quotes[random].quote;
+                author.innerHTML = `-${items.quotes[random].author}`;
+            })
+            .catch((err) => console.log(err));
+        };
+        nextQuote();
+
+        setInterval(imgLoad, 5000);    
+        setInterval(nextQuote, 5000);
+    </script>
+</body>
+</html>
