@@ -1,0 +1,78 @@
+@import url('https://webfontworld.github.io/gimhae/GimhaeGaya.css');
+@import url('https://webfontworld.github.io/suseong/SuseongDotum.css');
+@import url('https://webfontworld.github.io/eulyoo/Eulyoo1945.css');
+@import url('https://webfontworld.github.io/mapo/MapoDPP.css');
+@import url('https://webfontworld.github.io/elice/EliceDigitalBaeum.css');
+@import url('https://webfontworld.github.io/sandbox/SBAggro.css');
+@import url('https://webfontworld.github.io/kohi/KOHIBaeum.css');
+@import url('https://webfontworld.github.io/heiroflight/HeirofLight.css');
+@import url('https://webfontworld.github.io/kopus/KoPubWorldBatang.css');
+@import url('https://webfontworld.github.io/HambakSnow/HambakSnow.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/miryang/MYArirangGothic.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+body {
+    background-color: #222;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: 'MYArirangGothic';
+    font-weight: 300;
+}
+.font02 {
+    font-family: 'gabia_maeumgyeol';
+}
+.font03 {
+    font-family: 'Eulyoo1945';
+}
+.font04 {
+    font-family: 'MapoDPP';
+}
+.font05 {
+    font-family: 'EliceDigitalBaeum';
+}
+.font06 {
+    font-family: 'SBAggro';
+}
+.font07 {
+    font-family: 'KOHIBaeum';
+}
+.font08 {
+    font-family: 'HeirofLight';
+}
+.font09 {
+    font-family: 'KoPubWorldBatang';
+}
+.font10 {
+    font-family: 'NexonLv1Gothic';
+}
+
+
