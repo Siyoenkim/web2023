@@ -200,13 +200,25 @@
             document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop;
             document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
 
-            // -> 포문
-            // for(let i=1; i<10; i++){
-            //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
+            // for문
+            // for(let i=1; i<=9; i++){
+            //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop;
+            // };
+
+            //forEach문
+            // info.forEach((el,i)=> {
+            //     el.innerText = document.getElementById("section"+(i+1)).offsetTop
+            // });
+            
+            //for of문
+            // for (const [i, el] of info.entries()) {
+            //     el.innerText = document.getElementById(`section${i+1}`).offsetTop;
             // }
-            // forEach
-            // for in
-            // for of
+
+            //for in문
+            // for (const i in info) {
+            //     info[i].innerText = document.getElementById(`section${parseInt(i)+1}`).offsetTop;
+            // }
         });
     </script>
 </body>
