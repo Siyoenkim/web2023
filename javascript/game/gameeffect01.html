@@ -55,6 +55,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse01.png")
+                $("#header").css("background-color", "rgba(255,255,255,0.3")
             },
         });
         
@@ -62,6 +63,7 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse02.png")
+                $("#header").css("background-color", "rgba(0,0,0,0.3")
             },
         });
 
@@ -69,13 +71,15 @@
             containment: ".icon__box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse03.png")
+                $("#header").css("background-color", "rgba(30,100,0,0.4);")
             },
         });
 
         $(".icon4").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $(".cursor img").attr("src", "img/game_mouse04.png")  
+                $("#header").css("background-color", "rgba(255,0,0,0.1);")
             },
         });
 
